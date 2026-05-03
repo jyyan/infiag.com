@@ -14,7 +14,7 @@ const items = computed(() => [
 </script>
 
 <template>
-  <nav class="hidden lg:flex items-center gap-1">
+  <nav class="hidden md:flex items-center gap-1">
     <NuxtLink
       v-for="item in items"
       :key="item.to"

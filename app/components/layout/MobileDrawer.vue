@@ -22,7 +22,7 @@ const items = computed(() => [
 <template>
   <Sheet v-model:open="open">
     <SheetTrigger
-      class="lg:hidden p-2 rounded-md text-fg-primary
+      class="md:hidden p-2 rounded-md text-fg-primary
              hover:bg-bg-elevated transition-colors"
       aria-label="Open menu"
     >

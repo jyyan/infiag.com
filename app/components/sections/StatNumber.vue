@@ -16,9 +16,9 @@ const animated = useTransition(target, {
   transition: TransitionPresets.easeOutCubic,
 })
 
-watchOnce(visible, (v) => {
+watch(visible, (v) => {
   if (v) target.value = props.value
-})
+}, { once: true })
 </script>
 
 <template>
