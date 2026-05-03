@@ -7,6 +7,29 @@ const { data } = await useAsyncData(
   () => queryCollection('pages').path(`/${locale.value}/partners`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/partners#webpage',
+    url: 'https://infiag.com/partners',
+    name: () => t('schema.partners.name'),
+    description: () => t('schema.partners.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+  {
+    '@type': 'Service',
+    '@id': 'https://infiag.com/partners#service',
+    name: () => t('schema.partners.name'),
+    description: () => t('schema.partners.description'),
+    serviceType: 'B2B Partnership Program',
+    areaServed: ['TW', 'CN', 'Global'],
+    provider: { '@id': 'https://infiag.com/#organization' },
+    audience: { '@type': 'Audience', audienceType: 'Partner' },
+  },
+])
 </script>
 
 <template>

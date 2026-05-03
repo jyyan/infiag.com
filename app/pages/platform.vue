@@ -30,6 +30,29 @@ const features = computed(() => locale.value === 'en' ? [
 ])
 
 usePageSeo({ title: titleMap[locale.value] ?? titleMap['zh-TW'] })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/platform#webpage',
+    url: 'https://infiag.com/platform',
+    name: () => t('schema.platform.name'),
+    description: () => t('schema.platform.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+  {
+    '@type': 'Service',
+    '@id': 'https://infiag.com/platform#service',
+    name: () => t('schema.platform.name'),
+    description: () => t('schema.platform.description'),
+    serviceType: 'AI/VR Open Platform',
+    areaServed: ['TW', 'CN', 'Global'],
+    provider: { '@id': 'https://infiag.com/#organization' },
+    audience: { '@type': 'Audience', audienceType: 'Business' },
+  },
+])
 </script>
 
 <template>
