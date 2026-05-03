@@ -1,0 +1,18 @@
+/**
+ * Cloudflare Worker config — serves the Nuxt SSG output as static assets.
+ *
+ * Build:  npm run generate          → produces .output/public/
+ * Deploy: npx wrangler deploy       (reads this file)
+ *
+ * Docs: https://developers.cloudflare.com/workers/static-assets/
+ */
+{
+  "$schema": "node_modules/wrangler/config-schema.json",
+  "name": "infiag-com",
+  "compatibility_date": "2026-05-03",
+
+  "assets": {
+    "directory": "./.output/public",
+    "not_found_handling": "404-page"
+  }
+}
