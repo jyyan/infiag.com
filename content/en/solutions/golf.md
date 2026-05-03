@@ -6,10 +6,10 @@ features:
   - icon: target
     title: Swing Trajectory Analysis
     desc: Millisecond-precision AI motion capture with instant feedback
-  - icon: vr
+  - icon: glasses
     title: World-Class Course Recreation
     desc: Play St Andrews and Pebble Beach from home
-  - icon: trend-up
+  - icon: trending-up
     title: Personalized Progress Tracking
     desc: Long-term performance reports from accumulated data
 ---

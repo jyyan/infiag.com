@@ -6,10 +6,10 @@ features:
   - icon: target
     title: 揮桿軌跡分析
     desc: 毫秒級 AI 動作捕捉，給出即時改進建議
-  - icon: vr
+  - icon: glasses
     title: 全球名場虛擬重現
     desc: 在家即可體驗 St Andrews、Pebble Beach
-  - icon: trend-up
+  - icon: trending-up
     title: 個人化進步追蹤
     desc: 累積數據生成長期表現報表
 ---

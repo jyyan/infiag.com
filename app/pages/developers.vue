@@ -14,14 +14,14 @@ const benefits = computed(() => locale.value === 'en' ? [
   { icon: 'package',  title: 'Free SDK',             desc: 'Open SDK + comprehensive samples and tutorials' },
   { icon: 'wallet',   title: 'Low Royalty',          desc: 'Reduced or waived initial royalties to lower your risk' },
   { icon: 'users',    title: 'Big User Base',        desc: 'Tap into our growing niche audiences (golf, ski, vision)' },
-  { icon: 'chart',    title: 'Revenue Share',        desc: 'Transparent monetization with platform analytics' },
+  { icon: 'line-chart',    title: 'Revenue Share',        desc: 'Transparent monetization with platform analytics' },
   { icon: 'megaphone',title: 'Marketing Co-op',      desc: 'Featured placement in launch campaigns' },
 ] : [
   { icon: 'code',     title: '單一程式碼基底',        desc: '同一份程式碼在所有相容硬體上運行' },
   { icon: 'package',  title: '免費 SDK',              desc: '開放 SDK + 完整範例與教學' },
   { icon: 'wallet',   title: '低權利金',              desc: '降低或免除初期權利金，降低風險' },
   { icon: 'users',    title: '龐大用戶基數',          desc: '直接接觸高爾夫、滑雪、兒童近視等利基受眾' },
-  { icon: 'chart',    title: '透明分潤',              desc: '透明的變現機制與平台分析' },
+  { icon: 'line-chart',    title: '透明分潤',              desc: '透明的變現機制與平台分析' },
   { icon: 'megaphone',title: '聯合行銷',              desc: '上線活動聯合推廣' },
 ])
 

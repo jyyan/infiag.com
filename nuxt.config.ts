@@ -6,6 +6,13 @@ export default defineNuxtConfig({
   },
   devtools: { enabled: true },
   ssr: true,
+  // Force pure static SSG even when building inside Cloudflare's environment.
+  // Without this, Nitro auto-switches to 'cloudflare-module' (a Worker that
+  // SSRs at runtime), generates its own wrangler.json that overrides ours,
+  // and breaks the static-assets deploy flow defined in /wrangler.jsonc.
+  nitro: {
+    preset: 'static',
+  },
   app: {
     head: {
       htmlAttrs: { lang: 'zh-TW' },
