@@ -7,6 +7,19 @@ const { data } = await useAsyncData(
   () => queryCollection('pages').path(`/${locale.value}/investors`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/investors#webpage',
+    url: 'https://infiag.com/investors',
+    name: () => t('nav.investors'),
+    description: () => t('schema.org.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+])
 </script>
 
 <template>

@@ -6,15 +6,19 @@
 // nested objects). t() coerces to string and would return "[object Object]"
 // or stringify the array, which is wrong for schema fields.
 
-export function useSiteSchema() {
-  const { t, tm, locale } = useI18n()
-
-  const localeToBcp47: Record<string, string> = {
+export function useLocaleLang(): string {
+  const { locale } = useI18n()
+  const map: Record<string, string> = {
     'zh-TW': 'zh-Hant',
     'zh-CN': 'zh-Hans',
     'en': 'en-US',
   }
-  const lang = localeToBcp47[locale.value] ?? 'en-US'
+  return map[locale.value] ?? 'en-US'
+}
+
+export function useSiteSchema() {
+  const { t, tm } = useI18n()
+  const lang = useLocaleLang()
 
   const organization = defineOrganization({
     '@id': 'https://infiag.com/#organization',

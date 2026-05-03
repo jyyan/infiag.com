@@ -7,6 +7,19 @@ usePageSeo({
   title: t('home.hero_title_1') + ' ' + t('home.hero_title_2'),
 })
 
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/#webpage',
+    url: 'https://infiag.com',
+    name: () => `${t('home.hero_title_1')} ${t('home.hero_title_2')}`,
+    description: () => t('home.hero_subtitle'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+])
+
 const isEn = computed(() => locale.value === 'en')
 
 const problems = computed(() => [

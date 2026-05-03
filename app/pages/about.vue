@@ -29,6 +29,20 @@ const soar = computed(() => [
 ])
 
 usePageSeo({ title: titleByLocale.value, description: introByLocale.value })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'AboutPage',
+    '@id': 'https://infiag.com/about#webpage',
+    url: 'https://infiag.com/about',
+    name: () => t('nav.about'),
+    description: () => t('schema.org.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+])
 </script>
 
 <template>

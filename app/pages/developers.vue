@@ -26,6 +26,19 @@ const benefits = computed(() => locale.value === 'en' ? [
 ])
 
 usePageSeo({ title: titleMap[locale.value] ?? titleMap['zh-TW'] })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/developers#webpage',
+    url: 'https://infiag.com/developers',
+    name: () => t('nav.developers'),
+    description: () => t('schema.org.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+])
 </script>
 
 <template>
