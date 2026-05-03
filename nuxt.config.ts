@@ -31,6 +31,9 @@ export default defineNuxtConfig({
     '@nuxt/image',
     '@nuxt/icon',
   ],
+  components: [
+    { path: '~/components', pathPrefix: false },
+  ],
   css: ['~/assets/css/tailwind.css'],
   tailwindcss: {
     cssPath: '~/assets/css/tailwind.css',
