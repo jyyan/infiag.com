@@ -13,7 +13,7 @@ export function useLocaleLang(): string {
     'zh-CN': 'zh-Hans',
     'en': 'en-US',
   }
-  return map[locale.value] ?? 'en-US'
+  return map[locale.value] ?? 'zh-Hant'
 }
 
 export function useSiteSchema() {
