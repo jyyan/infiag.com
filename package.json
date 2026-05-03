@@ -5,7 +5,7 @@
   "scripts": {
     "build": "nuxt build",
     "dev": "nuxt dev",
-    "generate": "nuxt generate && cp .output/public/200.html .output/public/index.html",
+    "generate": "nuxt generate && cp .output/public/200.html .output/public/index.html && node scripts/verify-jsonld.mjs",
     "preview": "nuxt preview",
     "postinstall": "nuxt prepare",
     "favicon": "node scripts/generate-favicons.mjs"
