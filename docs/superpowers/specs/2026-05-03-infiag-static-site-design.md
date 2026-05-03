@@ -27,7 +27,7 @@
 - Tailwind + shadcn-vue 設計系統，深色科技感主題
 - mailto 為唯一表單機制
 - Markdown 長文 + i18n JSON UI 字串雙軌內容流
-- `nuxi generate` SSG，部署到 Cloudflare R2
+- `nuxi generate` SSG，部署到 Cloudflare Pages（Workers Static Assets）
 
 ### 1.4 範圍外（YAGNI）
 
@@ -46,12 +46,12 @@
 | UI 系統 | Tailwind CSS + shadcn-vue | ui-ux-pro-max 直接支援，dark/glass 現成 |
 | 動畫等級 | 中量（`@vueuse/motion` + 粒子/SVG） | banner 已展現視覺強度，不需額外 3D |
 | 內容 | Nuxt Content (Markdown) + i18n JSON | 長文走 MD，UI 字串走 JSON |
-| 表單 | 純 mailto（`luke@infiag.com`） | 純靜態無後端 |
+| 表單 | 純 mailto（業務 `jeff@infiag.com` / 技術 `luke@infiag.com`） | 純靜態無後端 |
 | 投資人區 | 公開頁面 | 純靜態不適合敏感資料；敏感內容 mailto 索取 |
 | Logo | 暫用 banner 切版 | 之後另提供獨立 SVG |
 | 域名 | `https://infiag.com` | 影響 sitemap/canonical/OG |
-| 部署 | Cloudflare R2 static website hosting | 用戶指定 |
-| 部署方式 | 手動上傳 | 用戶指定不自動化 |
+| 部署 | Cloudflare Pages（Workers Static Assets，`wrangler.jsonc`） | 用戶指定 |
+| 部署方式 | `npx wrangler deploy`（手動觸發） | 用戶指定不自動化 |
 
 ---
 
@@ -327,7 +327,7 @@ shadcn 的 CSS variable（`--background`、`--primary`、`--card`、...）統一
 
 ### 7.5 字體
 
-從 Google Fonts CDN 載入 Noto Sans TC/SC + Noto Serif TC/SC + JetBrains Mono，避免打包字體增加 R2 流量。
+從 Google Fonts CDN 載入 Noto Sans TC/SC + Noto Serif TC/SC + JetBrains Mono，避免打包字體增加 bundle 體積。
 
 ---
 
@@ -481,14 +481,11 @@ npm run generate      # 等同於 nuxi generate
 └── robots.txt
 ```
 
-### 11.3 Cloudflare R2 設定（一次性）
+### 11.3 Cloudflare Pages 設定（一次性）
 
-1. 建 R2 bucket：建議名稱 `infiag-com-prod`
-2. **R2 Settings → Public access → Custom Domain**：綁 `infiag.com`
-3. **R2 Settings → Public access → Static website hosting**：
-   - Index document：`index.html`
-   - Error document：`404.html`
-4. Cloudflare DNS：`infiag.com` CNAME → R2 bucket（綁 custom domain 時自動完成）
+1. `wrangler.jsonc` 在 repo root，已指向 `./.output/public` 為 static assets directory
+2. `npm install -g wrangler && wrangler login`（一次性認證）
+3. Cloudflare Dashboard → Workers / Pages → 綁 `infiag.com` custom domain（DNS 由 Cloudflare 自動處理）
 
 ### 11.4 手動部署流程
 
@@ -496,9 +493,8 @@ npm run generate      # 等同於 nuxi generate
 
 1. 本機跑 `npm run generate`
 2. 確認 `.output/public/` 內容正確（特別是 `_nuxt/` 資源、各語系 index.html）
-3. 在 Cloudflare Dashboard 進入 R2 bucket → **Objects** → 上傳資料夾
-   - 或自行使用 `wrangler r2 object put` 上傳（自由選擇）
-4. 上傳完畢後若有舊檔案需清掉，手動刪除舊版本目錄
+3. `npx wrangler deploy` — 讀 `wrangler.jsonc`，把 `.output/public/` 上傳成 static assets
+4. 開 `https://infiag.com/` 驗證；必要時 Dashboard → Caching → Purge Everything
 
 **不做自動 CI/CD**（用戶決定）。
 
@@ -512,7 +508,7 @@ npm run generate      # 等同於 nuxi generate
 4. **mailto 集中管理**：`useMailto()` composable 統一組裝
 5. **YAGNI**：不做 light mode、不做後端、不做 CMS、不做 3D、不做測試
 6. **效能優先**：動畫降級、字體 CDN、Nuxt Image 自動 webp/avif
-7. **手動部署**：build 出產物，手動上傳 R2
+7. **手動部署**：`npm run generate` → `npx wrangler deploy`（Cloudflare Pages）
 
 ---
 
@@ -521,7 +517,7 @@ npm run generate      # 等同於 nuxi generate
 - 純 mailto 表單 → 訪客需要 email client；行動裝置體驗較弱
 - 投資人區公開 → 不適合放敏感財務資料
 - 純靜態 → 無法做即時資料（價格、新聞等）
-- R2 無內建表單 / Worker → 任何動態功能未來需另外加 Cloudflare Workers
+- 純靜態 assets → 任何動態功能未來需在同一個 Cloudflare Worker 加 server handler（或新建額外 Worker）
 - Logo 使用 banner 切版 → 待用戶提供獨立 SVG 之前，視覺一致性會打折
 
 ---

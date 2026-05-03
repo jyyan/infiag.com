@@ -11,7 +11,7 @@ Infinity Agentic 無限智能 — official multi-locale static site.
 - **Animation:** `@vueuse/motion` (scroll reveal) + custom canvas particles + SVG line draw
 - **SEO:** `@nuxtjs/seo` (sitemap + hreflang + OG + robots)
 - **Forms:** `mailto:` only (no backend) — three B2B presets in `useMailto`
-- **Deploy:** Cloudflare R2 static website hosting (manual upload)
+- **Deploy:** Cloudflare Pages (Workers Static Assets) — manual `npx wrangler deploy`
 
 ## Site Map
 
@@ -51,8 +51,8 @@ npm run generate     # → .output/public/
 ```
 
 `generate` runs `nuxi generate` then copies `200.html` to `index.html` so the root
-URL has a working entry point on Cloudflare R2 (which otherwise 404s when the
-configured index document is missing).
+URL has a working entry point on Cloudflare Pages (which otherwise 404s when no
+explicit `index.html` exists at the root).
 
 Output is approximately **5 MB** of HTML, hashed JS/CSS bundles in `_nuxt/`,
 sitemaps under `__sitemap__/` and `sitemap_index.xml`, plus an `og-default.png`
@@ -60,8 +60,8 @@ fallback OG image.
 
 ## Deploy
 
-See `docs/deployment.md` — manual upload to Cloudflare R2 with custom-domain
-static website hosting.
+See `docs/deployment.md` — manual `npx wrangler deploy` to Cloudflare Pages
+(Workers Static Assets) configured via `wrangler.jsonc`.
 
 ## Project Structure
 

@@ -2,9 +2,9 @@
 
 > **For agentic workers:** REQUIRED SUB-SKILL: Use superpowers:subagent-driven-development (recommended) or superpowers:executing-plans to implement this plan task-by-task. Steps use checkbox (`- [ ]`) syntax for tracking.
 
-**Goal:** Build a multi-page (8 pages × 3 locales = 24 URLs) static website foundation for Infinity Agentic with deep-space tech aesthetic, ready to deploy to Cloudflare R2.
+**Goal:** Build a multi-page (8 pages × 3 locales = 24 URLs) static website foundation for Infinity Agentic with deep-space tech aesthetic, ready to deploy to Cloudflare Pages.
 
-**Architecture:** Nuxt 3 (compatibilityVersion 4) SSG + Vue 3 + TypeScript. Tailwind + shadcn-vue for design system. `@nuxtjs/i18n` v9 for three locales (zh-TW default / zh-CN / en) with prefix routing. Long content in Markdown via Nuxt Content v3 collections; UI strings in i18n JSON. Mailto-only forms. Manual deploy to Cloudflare R2 static hosting.
+**Architecture:** Nuxt 3 (compatibilityVersion 4) SSG + Vue 3 + TypeScript. Tailwind + shadcn-vue for design system. `@nuxtjs/i18n` v9 for three locales (zh-TW default / zh-CN / en) with prefix routing. Long content in Markdown via Nuxt Content v3 collections; UI strings in i18n JSON. Mailto-only forms. Manual deploy to Cloudflare Pages (Workers Static Assets) via `npx wrangler deploy`.
 
 **Tech Stack:** Nuxt 3.14+, Vue 3.5+, TS 5.5+, Tailwind 6.12, shadcn-nuxt 1.0, @nuxtjs/i18n 9.0, @nuxt/content 3.0, @vueuse/motion 2.2, @nuxtjs/seo 2.0, @nuxt/image 1.8, @nuxt/icon 1.10, npm 10.
 
@@ -121,7 +121,7 @@ Infinity Agentic 無限智能 — official static site.
 
 ## Stack
 
-Nuxt 3 + Vue 3 + TypeScript + Tailwind CSS + shadcn-vue. Three locales (zh-TW / zh-CN / en). Static-generated and deployed to Cloudflare R2.
+Nuxt 3 + Vue 3 + TypeScript + Tailwind CSS + shadcn-vue. Three locales (zh-TW / zh-CN / en). Static-generated and deployed to Cloudflare Pages.
 
 ## Develop
 
@@ -136,7 +136,7 @@ npm run dev          # http://localhost:3000
 npm run generate     # → .output/public/
 \`\`\`
 
-Then upload `.output/public/` to Cloudflare R2 bucket via dashboard or wrangler.
+Then deploy with `npx wrangler deploy` (reads `wrangler.jsonc` and uploads `.output/public/` as Cloudflare Pages static assets).
 
 ## Documentation
 
@@ -3537,25 +3537,22 @@ git commit -m "chore: confirm full SSG build with 24 localized URLs" --allow-emp
 
 ```markdown
 <!-- docs/deployment.md -->
-# Deploying to Cloudflare R2
+# Deploying to Cloudflare Pages
 
-This site is deployed manually to a Cloudflare R2 bucket configured for static
-website hosting. No CI/CD is set up.
+This site is deployed to Cloudflare Pages (Workers Static Assets — see
+`wrangler.jsonc` at the repo root). No CI/CD is set up; deploys are run
+manually with `wrangler`.
 
 ## One-Time Setup
 
-1. Log in to Cloudflare Dashboard → R2.
-2. Create a bucket. Suggested name: `infiag-com-prod`.
-3. Open bucket → Settings → **Public Access**:
-   - Enable **Custom Domain** and add `infiag.com`.
-   - Enable **Static Website Hosting**:
-     - Index document: `index.html`
-     - Error document: `404.html`
-4. Cloudflare automatically configures the DNS record for the custom domain.
+1. Install wrangler: `npm install -g wrangler`
+2. Authenticate: `wrangler login`
+3. Map the custom domain `infiag.com` to the Worker / Pages project in the
+   Cloudflare dashboard (DNS handled there).
 
 ## Each Deployment
 
-1. From repo root, build the site:
+1. From repo root, build the static site:
 
    \`\`\`bash
    npm run generate
@@ -3564,53 +3561,35 @@ website hosting. No CI/CD is set up.
    This produces `.output/public/` with all 24 localized HTML pages,
    sitemap.xml, robots.txt, and hashed assets in `_nuxt/`.
 
-2. Upload `.output/public/` contents to the R2 bucket. Two options:
+2. Deploy via wrangler — it reads `wrangler.jsonc` and uploads
+   `.output/public/` as static assets:
 
-   **Option A — Cloudflare Dashboard (drag-drop)**
-   - Open bucket → **Objects** tab.
-   - Drag the contents of `.output/public/` into the upload area.
-   - Wait for upload to complete.
+   \`\`\`bash
+   npx wrangler deploy
+   \`\`\`
 
-   **Option B — wrangler CLI (faster for repeat deploys)**
-   - Install wrangler once: `npm install -g wrangler`
-   - Authenticate once: `wrangler login`
-   - Upload:
-     \`\`\`bash
-     cd .output/public
-     find . -type f | while read f; do
-       wrangler r2 object put "infiag-com-prod/${f#./}" --file "$f"
-     done
-     \`\`\`
-
-3. After upload, visit `https://infiag.com/` to verify.
+3. Visit `https://infiag.com/` to verify.
 
 ## Cache Invalidation
 
-R2 + Cloudflare CDN caches aggressively. After deploying:
+Cloudflare's CDN caches aggressively. After deploying:
 - New JS/CSS in `_nuxt/` use hashed filenames (auto-busted).
 - HTML files share the same path — purge them via:
-  - Cloudflare Dashboard → Caching → Configuration → **Purge Everything** (or specific URLs).
-
-## Removing Stale Files
-
-If you renamed or removed pages, delete corresponding old paths from the bucket
-manually via Dashboard → Objects, or use `wrangler r2 object delete`.
+  - Cloudflare Dashboard → Caching → Configuration → **Purge Everything**
+    (or specific URLs).
 
 ## Rollback
 
-R2 has no built-in versioning by default. To roll back:
 - Re-checkout the prior git commit.
 - Run `npm run generate` again.
-- Re-upload.
-
-(For real production safety, consider enabling R2 bucket versioning later.)
+- Re-run `npx wrangler deploy`.
 ```
 
 - [ ] **Step 2: Commit**
 
 ```bash
 git add docs/deployment.md
-git commit -m "docs: add manual Cloudflare R2 deployment runbook"
+git commit -m "docs: add manual Cloudflare Pages deployment runbook"
 ```
 
 ---
@@ -3636,7 +3615,7 @@ Infinity Agentic 無限智能 — official static site.
 - **Animation:** `@vueuse/motion` + custom canvas particles + SVG line draw
 - **SEO:** `@nuxtjs/seo` (sitemap, OG, hreflang)
 - **Forms:** `mailto:` only (no backend)
-- **Deploy:** Cloudflare R2 static website hosting (manual upload)
+- **Deploy:** Cloudflare Pages (Workers Static Assets) — manual `npx wrangler deploy`
 
 ## Develop
 
