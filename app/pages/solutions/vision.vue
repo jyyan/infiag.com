@@ -4,9 +4,20 @@ const { alliance } = useMailto()
 
 const { data } = await useAsyncData(
   () => `vision-${locale.value}`,
-  () => queryCollection('pages').path(`/${locale.value}/solutions/vision`).first()
+  () => queryCollection('pages').path(`/${locale.value.toLowerCase()}/solutions/vision`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
+
+const videoTitleMap = {
+  'zh-TW': '兒童近視矯正示範',
+  'zh-CN': '儿童近视矫正示范',
+  'en':    'Children Myopia Control Demo',
+}
+const videoCaptionMap = {
+  'zh-TW': '結合臨床標準的視覺訓練，透過親子友善的 AR 介面，設計給每日居家使用。',
+  'zh-CN': '结合临床标准的视觉训练，透过亲子友善的 AR 介面，设计给每日居家使用。',
+  'en':    'Clinically-grounded vision training delivered through child-friendly AR — designed for daily home use.',
+}
 
 const lang = useLocaleLang()
 useSchemaOrg([
@@ -39,10 +50,8 @@ useSchemaOrg([
       <div class="max-w-4xl mx-auto">
         <VideoCard
           src="https://cdn.infiag.com/media/Children%20Myopia%20Control.mp4"
-          :title="locale === 'en' ? 'Children Myopia Control Demo' : '兒童近視矯正示範'"
-          :caption="locale === 'en'
-            ? 'Clinically-grounded vision training delivered through child-friendly AR — designed for daily home use.'
-            : '結合臨床標準的視覺訓練，透過親子友善的 AR 介面，設計給每日居家使用。'"
+          :title="videoTitleMap[locale] ?? videoTitleMap['zh-TW']"
+          :caption="videoCaptionMap[locale] ?? videoCaptionMap['zh-TW']"
         />
       </div>
     </SectionContainer>

@@ -4,7 +4,7 @@ const { alliance, agent } = useMailto()
 
 const { data } = await useAsyncData(
   () => `partners-${locale.value}`,
-  () => queryCollection('pages').path(`/${locale.value}/partners`).first()
+  () => queryCollection('pages').path(`/${locale.value.toLowerCase()}/partners`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
 

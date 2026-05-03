@@ -4,7 +4,7 @@ const { pitchDeck } = useMailto()
 
 const { data } = await useAsyncData(
   () => `investors-${locale.value}`,
-  () => queryCollection('pages').path(`/${locale.value}/investors`).first()
+  () => queryCollection('pages').path(`/${locale.value.toLowerCase()}/investors`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
 

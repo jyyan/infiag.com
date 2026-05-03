@@ -5,8 +5,19 @@ const { t } = useI18n()
 
 const { data } = await useAsyncData(
   () => `golf-${locale.value}`,
-  () => queryCollection('pages').path(`/${locale.value}/solutions/golf`).first()
+  () => queryCollection('pages').path(`/${locale.value.toLowerCase()}/solutions/golf`).first()
 )
+
+const videoTitleMap = {
+  'zh-TW': 'Golf AI 訓練示範',
+  'zh-CN': 'Golf AI 训练示范',
+  'en':    'Golf AI Training Demo',
+}
+const videoCaptionMap = {
+  'zh-TW': 'AI 揮桿分析 + VR 沉浸練習：玩家在室內就能取得轉播級的即時回饋。',
+  'zh-CN': 'AI 挥杆分析 + VR 沉浸练习：玩家在室内就能取得转播级的实时反馈。',
+  'en':    'AI swing analysis with VR practice — see how players train indoors with broadcast-grade feedback.',
+}
 
 usePageSeo({
   title: data.value?.title,
@@ -48,10 +59,8 @@ useSchemaOrg([
       <div class="max-w-4xl mx-auto">
         <VideoCard
           src="https://cdn.infiag.com/media/Golf%20AI%20Training.mp4"
-          :title="locale === 'en' ? 'Golf AI Training Demo' : 'Golf AI 訓練示範'"
-          :caption="locale === 'en'
-            ? 'AI swing analysis with VR practice — see how players train indoors with broadcast-grade feedback.'
-            : 'AI 揮桿分析 + VR 沉浸練習：玩家在室內就能取得轉播級的即時回饋。'"
+          :title="videoTitleMap[locale] ?? videoTitleMap['zh-TW']"
+          :caption="videoCaptionMap[locale] ?? videoCaptionMap['zh-TW']"
         />
       </div>
     </SectionContainer>
