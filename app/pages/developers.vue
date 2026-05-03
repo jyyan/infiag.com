@@ -1,6 +1,6 @@
 <script setup lang="ts">
 const { locale, t } = useI18n()
-const { alliance } = useMailto()
+const { support } = useMailto()
 
 const titleMap = { 'zh-TW': '開發者 / SDK', 'zh-CN': '开发者 / SDK', 'en': 'Developers / SDK' }
 const subtitleMap = {
@@ -44,7 +44,7 @@ usePageSeo({ title: titleMap[locale.value] ?? titleMap['zh-TW'] })
       :title="locale === 'en' ? 'Ready to start building?' : '準備好開始開發了嗎？'"
       :subtitle="locale === 'en' ? 'Get early access to our SDK and developer program.' : '取得 SDK 與開發者計畫的早期存取權'"
       :cta-label="t('cta.contact')"
-      :cta-href="alliance(locale)"
+      :cta-href="support(locale)"
     />
   </div>
 </template>

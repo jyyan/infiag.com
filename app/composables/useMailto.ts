@@ -1,4 +1,5 @@
 export interface MailtoOptions {
+  to?: string
   subject?: string
   body?: string
   cc?: string
@@ -6,6 +7,7 @@ export interface MailtoOptions {
 }
 
 const CONTACT_EMAIL = 'jeff@infiag.com'
+const SUPPORT_EMAIL = 'luke@infiag.com'
 
 export function useMailto() {
   function buildMailto(options: MailtoOptions = {}): string {
@@ -15,11 +17,13 @@ export function useMailto() {
     if (options.cc) params.set('cc', options.cc)
     if (options.bcc) params.set('bcc', options.bcc)
     const qs = params.toString()
-    return `mailto:${CONTACT_EMAIL}${qs ? '?' + qs : ''}`
+    const to = options.to ?? CONTACT_EMAIL
+    return `mailto:${to}${qs ? '?' + qs : ''}`
   }
 
   return {
     contactEmail: CONTACT_EMAIL,
+    supportEmail: SUPPORT_EMAIL,
     buildMailto,
     /** Common preset: alliance enquiry */
     alliance: (locale: string) => buildMailto({
@@ -41,6 +45,14 @@ export function useMailto() {
       body: locale === 'en'
         ? 'Hello,\n\nWe would like to apply for regional agent rights.\n\nRegion:\nCompany:\nName:\nContact:\n\nThank you.'
         : '您好，我們希望申請地區代理權。\n\n申請地區：\n公司：\n姓名：\n聯絡：\n\n謝謝。',
+    }),
+    /** Common preset: developer / SDK technical support */
+    support: (locale: string) => buildMailto({
+      to: SUPPORT_EMAIL,
+      subject: locale === 'en' ? 'SDK & Developer Program Enquiry' : 'SDK 與開發者計畫諮詢',
+      body: locale === 'en'
+        ? 'Hello,\n\nI am interested in the Infinity SDK and developer program.\n\nName:\nCompany / Project:\nUse case:\nTarget hardware:\n\nThank you.'
+        : '您好，希望了解 Infinity SDK 與開發者計畫。\n\n姓名：\n公司 / 專案：\n應用情境：\n目標硬體：\n\n謝謝。',
     }),
   }
 }
