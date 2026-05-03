@@ -208,8 +208,10 @@ scripts/
 ```ts
 import { useI18n } from '#imports'
 
+// Note: vue-i18n v9+ uses `tm()` to access array/object message values.
+// `t()` returns string only; `tm()` returns the raw message structure.
 export function useSiteSchema() {
-  const { t, locale } = useI18n()
+  const { t, tm, locale } = useI18n()
   const lang = locale.value === 'zh-TW' ? 'zh-Hant'
             : locale.value === 'zh-CN' ? 'zh-Hans'
             : 'en-US'
@@ -249,7 +251,7 @@ export function useSiteSchema() {
         availableLanguage: ['zh-Hant', 'zh-Hans', 'en'],
       },
     ],
-    knowsAbout: t('schema.org.knowsAbout', { returnObjects: true }) as string[],
+    knowsAbout: tm('schema.org.knowsAbout') as string[],
   })
 
   const website = defineWebSite({
@@ -338,6 +340,7 @@ zh-CN / en 對應產出。
 - `numberOfEmployees`
 - `award` / `memberOf` / `parentOrganization` / `subOrganization`
 - `logo` 實際路徑與尺寸(目前用 `/logo.png` placeholder,需確認檔案存在)
+- 各 `Service` 物件的 `name` / `description` 三語文案(`schema.solutions.{golf,ski,vision}` / `schema.platform` / `schema.partners`):實作時可先從現有頁面文案抽取,Luke 再潤飾
 
 ## 不做(YAGNI)
 
