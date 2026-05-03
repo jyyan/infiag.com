@@ -1,7 +1,9 @@
 import type { Config } from 'tailwindcss'
+import typography from '@tailwindcss/typography'
 
 export default <Partial<Config>>{
   darkMode: 'class',
+  plugins: [typography],
   content: [
     './app/components/**/*.{vue,js,ts}',
     './app/layouts/**/*.vue',
