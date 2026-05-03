@@ -12,6 +12,29 @@ usePageSeo({
   title: data.value?.title,
   description: data.value?.description,
 })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/solutions/golf#webpage',
+    url: 'https://infiag.com/solutions/golf',
+    name: () => t('schema.solutions.golf.name'),
+    description: () => t('schema.solutions.golf.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+  {
+    '@type': 'Service',
+    '@id': 'https://infiag.com/solutions/golf#service',
+    name: () => t('schema.solutions.golf.name'),
+    description: () => t('schema.solutions.golf.description'),
+    serviceType: 'Golf Simulation Platform',
+    areaServed: ['TW', 'CN', 'Global'],
+    provider: { '@id': 'https://infiag.com/#organization' },
+    audience: { '@type': 'Audience', audienceType: 'Business' },
+  },
+])
 </script>
 
 <template>

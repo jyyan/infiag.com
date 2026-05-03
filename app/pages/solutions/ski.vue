@@ -7,6 +7,29 @@ const { data } = await useAsyncData(
   () => queryCollection('pages').path(`/${locale.value}/solutions/ski`).first()
 )
 usePageSeo({ title: data.value?.title, description: data.value?.description })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@id': 'https://infiag.com/solutions/ski#webpage',
+    url: 'https://infiag.com/solutions/ski',
+    name: () => t('schema.solutions.ski.name'),
+    description: () => t('schema.solutions.ski.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+  {
+    '@type': 'Service',
+    '@id': 'https://infiag.com/solutions/ski#service',
+    name: () => t('schema.solutions.ski.name'),
+    description: () => t('schema.solutions.ski.description'),
+    serviceType: 'Ski Training Platform',
+    areaServed: ['TW', 'CN', 'Global'],
+    provider: { '@id': 'https://infiag.com/#organization' },
+    audience: { '@type': 'Audience', audienceType: 'Business' },
+  },
+])
 </script>
 
 <template>
