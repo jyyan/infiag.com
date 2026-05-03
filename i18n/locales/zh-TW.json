@@ -47,5 +47,43 @@
   },
   "lang": {
     "switch": "語言"
+  },
+  "schema": {
+    "org": {
+      "description": "打造 AI/VR 開放生態合作平台,結合硬體、軟體與運動醫療機構建立跨品牌相容標準",
+      "knowsAbout": [
+        "人工智慧",
+        "虛擬實境",
+        "智能眼鏡",
+        "AI/VR 開放生態",
+        "高爾夫模擬",
+        "滑雪訓練",
+        "兒童近視矯正",
+        "B2B 合作",
+        "軟硬體聯盟"
+      ]
+    },
+    "platform": {
+      "name": "Infinity Agentic 開放平台",
+      "description": "跨品牌相容的 AI/VR 軟硬體標準與 SDK,讓單一程式碼運行於所有相容裝置。"
+    },
+    "partners": {
+      "name": "Infinity Agentic 合作夥伴計畫",
+      "description": "硬體廠、軟體廠、運動與醫療機構的策略結盟方案,含捕獲期條款與專利打包授權。"
+    },
+    "solutions": {
+      "golf": {
+        "name": "AI/VR 高爾夫模擬解決方案",
+        "description": "AI 揮桿分析與沉浸式 VR 練習場,專為高消費力玩家打造。"
+      },
+      "ski": {
+        "name": "AI/VR 滑雪訓練解決方案",
+        "description": "雪季前虛擬訓練、雪道上 AR 教練輔助。"
+      },
+      "vision": {
+        "name": "兒童近視矯正解決方案",
+        "description": "結合臨床標準的兒童近視預防與矯正系統。"
+      }
+    }
   }
 }

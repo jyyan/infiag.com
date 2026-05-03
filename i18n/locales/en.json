@@ -47,5 +47,43 @@
   },
   "lang": {
     "switch": "Language"
+  },
+  "schema": {
+    "org": {
+      "description": "Building an open AI/VR ecosystem platform that aligns hardware vendors, software developers, and sports/medical institutions on cross-brand interoperability standards.",
+      "knowsAbout": [
+        "Artificial Intelligence",
+        "Virtual Reality",
+        "Smart Glasses",
+        "AI/VR Open Ecosystem",
+        "Golf Simulation",
+        "Ski Training",
+        "Pediatric Myopia Correction",
+        "B2B Partnership",
+        "Hardware-Software Alliance"
+      ]
+    },
+    "platform": {
+      "name": "Infinity Agentic Open Platform",
+      "description": "Cross-brand AI/VR hardware-software standards and SDK — write once, run on any compliant device."
+    },
+    "partners": {
+      "name": "Infinity Agentic Partner Program",
+      "description": "Strategic alliance program for hardware makers, software developers, and sports/medical institutions, with capture-period clauses and bundled IP licensing."
+    },
+    "solutions": {
+      "golf": {
+        "name": "AI/VR Golf Simulation Solution",
+        "description": "AI swing analysis and immersive VR practice for serious players."
+      },
+      "ski": {
+        "name": "AI/VR Ski Training Solution",
+        "description": "Pre-season virtual training and on-slope AR coaching for skiers."
+      },
+      "vision": {
+        "name": "Pediatric Myopia Correction Solution",
+        "description": "Clinically grounded vision-control system for children."
+      }
+    }
   }
 }
