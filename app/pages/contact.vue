@@ -16,6 +16,20 @@ const channels = computed(() => [
 ])
 
 usePageSeo({ title: titleMap[locale.value] ?? titleMap['zh-TW'] })
+
+const lang = useLocaleLang()
+useSchemaOrg([
+  defineWebPage({
+    '@type': 'ContactPage',
+    '@id': 'https://infiag.com/contact#webpage',
+    url: 'https://infiag.com/contact',
+    name: () => t('nav.contact'),
+    description: () => t('schema.org.description'),
+    inLanguage: lang,
+    isPartOf: { '@id': 'https://infiag.com/#website' },
+    about: { '@id': 'https://infiag.com/#organization' },
+  }),
+])
 </script>
 
 <template>
