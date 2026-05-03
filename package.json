@@ -7,7 +7,8 @@
     "dev": "nuxt dev",
     "generate": "nuxt generate && cp .output/public/200.html .output/public/index.html",
     "preview": "nuxt preview",
-    "postinstall": "nuxt prepare"
+    "postinstall": "nuxt prepare",
+    "favicon": "node scripts/generate-favicons.mjs"
   },
   "dependencies": {
     "@nuxt/content": "^3.13.0",
@@ -32,6 +33,7 @@
   "devDependencies": {
     "@nuxtjs/tailwindcss": "^6.14.0",
     "@tailwindcss/typography": "^0.5.19",
+    "png-to-ico": "^3.0.1",
     "shadcn-nuxt": "^2.6.2"
   },
   "overrides": {
