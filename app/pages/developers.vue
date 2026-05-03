@@ -48,6 +48,17 @@ useSchemaOrg([
       :subtitle="subtitleMap[locale] ?? subtitleMap['zh-TW']"
       variant="tech"
     />
+    <SectionContainer variant="tight">
+      <div class="max-w-4xl mx-auto">
+        <VideoCard
+          src="https://cdn.infiag.com/media/Learn%20Any%20Technical.mp4"
+          :title="locale === 'en' ? 'Learn Any Technical Skill' : '學習任何技術'"
+          :caption="locale === 'en'
+            ? 'A glimpse of what developers can build on the Infinity SDK — immersive, hands-on technical learning.'
+            : '一窺開發者能在 Infinity SDK 上打造的應用：沉浸式、實作導向的技術學習場景。'"
+        />
+      </div>
+    </SectionContainer>
     <SectionContainer>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         <FeatureCard v-for="b in benefits" :key="b.title" :icon="b.icon" :title="b.title" :description="b.desc" />

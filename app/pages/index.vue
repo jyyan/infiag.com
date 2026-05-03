@@ -89,6 +89,30 @@ const process = computed(() => [
                      : '確定範圍簽正式合約，依里程碑啟動聯合行銷。' },
 ])
 
+const demos = computed(() => [
+  {
+    src: 'https://cdn.infiag.com/media/Golf%20AI%20Training.mp4',
+    title: isEn.value ? 'Golf AI Training' : 'Golf AI 訓練',
+    caption: isEn.value
+      ? 'AI swing analysis with broadcast-grade feedback inside VR.'
+      : 'VR 沉浸式 AI 揮桿分析，給予玩家轉播級回饋。',
+  },
+  {
+    src: 'https://cdn.infiag.com/media/Children%20Myopia%20Control.mp4',
+    title: isEn.value ? 'Children Myopia Control' : '兒童近視矯正',
+    caption: isEn.value
+      ? 'Clinically-grounded daily vision training for kids.'
+      : '結合臨床標準的兒童每日視覺訓練。',
+  },
+  {
+    src: 'https://cdn.infiag.com/media/Learn%20Any%20Technical.mp4',
+    title: isEn.value ? 'Learn Any Technical Skill' : '學習任何技術',
+    caption: isEn.value
+      ? 'Immersive, hands-on technical learning on Infinity SDK.'
+      : '在 Infinity SDK 上打造沉浸式、實作導向的技術學習。',
+  },
+])
+
 const proofPoints = computed(() => [
   { icon: 'shield-check', title: isEn.value ? 'Capture-Period Clause'   : '捕獲期條款',
     desc: isEn.value ? 'Same royalty rate during licensee\'s standard product lifecycle — no surprise hikes.'
@@ -168,6 +192,21 @@ const proofPoints = computed(() => [
           :title="s.title"
           :description="s.description"
         />
+      </div>
+    </SectionContainer>
+
+    <!-- Demo Gallery — three niches in motion -->
+    <SectionContainer
+      :title="isEn ? 'See It in Motion' : '實機演示'"
+      :subtitle="isEn
+        ? 'Three live demos from our launch niches — golf, children\'s vision, and technical learning.'
+        : '三段首發利基的實機示範：高爾夫、兒童近視、技術學習。'"
+      variant="tech"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <FadeInUp v-for="(d, i) in demos" :key="d.src" :delay="i * 100">
+          <VideoCard :src="d.src" :title="d.title" :caption="d.caption" />
+        </FadeInUp>
       </div>
     </SectionContainer>
 

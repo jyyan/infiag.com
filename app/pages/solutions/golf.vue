@@ -44,6 +44,17 @@ useSchemaOrg([
       :subtitle="data.description"
       variant="tech"
     />
+    <SectionContainer variant="tight">
+      <div class="max-w-4xl mx-auto">
+        <VideoCard
+          src="https://cdn.infiag.com/media/Golf%20AI%20Training.mp4"
+          :title="locale === 'en' ? 'Golf AI Training Demo' : 'Golf AI 訓練示範'"
+          :caption="locale === 'en'
+            ? 'AI swing analysis with VR practice — see how players train indoors with broadcast-grade feedback.'
+            : 'AI 揮桿分析 + VR 沉浸練習：玩家在室內就能取得轉播級的即時回饋。'"
+        />
+      </div>
+    </SectionContainer>
     <SectionContainer v-if="data.features?.length">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         <FeatureCard
