@@ -129,7 +129,7 @@ Files in `app/components/ui/` are owned by the shadcn-vue CLI — do not hand-ed
 To add more, use `npx shadcn-vue@latest add <component>`.
 
 **Email contact point:**
-`luke@infiag.com` is hard-coded in `app/composables/useMailto.ts`. Change there to
+`jeff@infiag.com` is hard-coded in `app/composables/useMailto.ts`. Change there to
 update every CTA across the site.
 
 ## Documentation
