@@ -1,0 +1,88 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --bg-deep:       222 65% 8%;
+    --bg-base:       222 55% 11%;
+    --bg-elevated:   222 45% 16%;
+    --bg-glass:      222 50% 20% / 0.5;
+
+    --accent-glow:   202 100% 62%;
+    --accent-bright: 196 100% 75%;
+    --accent-deep:   215 85% 45%;
+
+    --fg-primary:    210 40% 98%;
+    --fg-secondary:  215 25% 75%;
+    --fg-muted:      215 20% 55%;
+
+    --border-glow:   202 100% 62% / 0.25;
+    --border-subtle: 222 30% 25%;
+
+    --background:           var(--bg-base);
+    --foreground:           var(--fg-primary);
+    --primary:              var(--accent-glow);
+    --primary-foreground:   var(--bg-deep);
+    --secondary:            var(--bg-elevated);
+    --secondary-foreground: var(--fg-primary);
+    --muted:                var(--bg-elevated);
+    --muted-foreground:     var(--fg-muted);
+    --accent:               var(--accent-glow);
+    --accent-foreground:    var(--bg-deep);
+    --destructive:          0 84% 60%;
+    --destructive-foreground: 0 0% 98%;
+    --card:                 var(--bg-elevated);
+    --card-foreground:      var(--fg-primary);
+    --popover:              var(--bg-elevated);
+    --popover-foreground:   var(--fg-primary);
+    --border:               var(--border-subtle);
+    --input:                var(--border-subtle);
+    --ring:                 var(--accent-glow);
+    --radius:               0.5rem;
+  }
+
+  html, body {
+    @apply bg-bg-base text-fg-primary font-sans antialiased;
+    color-scheme: dark;
+  }
+}
+
+@layer components {
+  .glass {
+    @apply bg-bg-glass backdrop-blur-glass border border-white/5;
+  }
+  .glass-card {
+    @apply glass rounded-2xl shadow-glow-sm hover:shadow-glow transition-shadow duration-300;
+  }
+  .text-glow {
+    @apply text-accent-bright;
+    text-shadow: 0 0 8px hsl(var(--accent-glow) / 0.6);
+  }
+  .text-gradient {
+    @apply bg-gradient-text bg-clip-text text-transparent;
+  }
+  .btn-glow {
+    @apply relative inline-flex items-center justify-center rounded-full
+           bg-gradient-glow text-bg-deep font-bold px-6 py-3
+           shadow-glow hover:shadow-glow-lg transition-all duration-200
+           hover:scale-[1.02] active:scale-[0.98];
+  }
+  .grid-tech {
+    background-image:
+      linear-gradient(hsl(var(--accent-glow) / 0.06) 1px, transparent 1px),
+      linear-gradient(90deg, hsl(var(--accent-glow) / 0.06) 1px, transparent 1px);
+    background-size: 48px 48px;
+  }
+  .container-tight {
+    @apply mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}

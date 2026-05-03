@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Infinity Agentic",
+    "tagline": "Open Platform for AI/VR Strategic Alliances",
+    "company": "Infinity Agentic Inc."
+  },
+  "nav": {
+    "home": "Home",
+    "about": "About",
+    "platform": "Platform",
+    "solutions": "Solutions",
+    "solutions_golf": "Golf",
+    "solutions_ski": "Ski",
+    "solutions_vision": "Children Vision",
+    "partners": "Partners",
+    "developers": "Developers",
+    "investors": "Investors",
+    "contact": "Contact"
+  },
+  "cta": {
+    "alliance": "Form an Alliance",
+    "learn_platform": "Learn About the Platform",
+    "contact": "Contact Us",
+    "request_deck": "Request Pitch Deck",
+    "become_partner": "Become a Partner"
+  },
+  "home": {
+    "hero_title_1": "Building the AI/VR",
+    "hero_title_2": "Open Ecosystem Platform",
+    "hero_subtitle": "Seeking strategic partners · National & regional agents",
+    "problem_title": "Market Pain Points",
+    "problem_subtitle": "Fragmented AI/VR specs and locked-in software make consumers pay twice",
+    "solutions_title": "Three Niche Markets",
+    "solutions_subtitle": "Launching with high-value professional verticals",
+    "ecosystem_title": "Open Ecosystem",
+    "ecosystem_subtitle": "Hardware makers · Software developers · Sports & medical institutions",
+    "aspiration_title": "The Qualcomm & Android of AI/VR",
+    "aspiration_subtitle": "Establishing cross-brand interoperability standards"
+  },
+  "footer": {
+    "sitemap": "Sitemap",
+    "contact": "Contact",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© 2026 Infinity Agentic Inc. All rights reserved."
+  },
+  "lang": {
+    "switch": "Language"
+  }
+}

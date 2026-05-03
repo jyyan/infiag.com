@@ -22,7 +22,53 @@ export default defineNuxtConfig({
     },
   },
   modules: [
-    // additions in later tasks: '@nuxtjs/tailwindcss', 'shadcn-nuxt', '@nuxtjs/i18n',
-    // '@nuxt/content', '@vueuse/motion/nuxt', '@nuxtjs/seo', '@nuxt/image', '@nuxt/icon',
+    '@nuxtjs/tailwindcss',
+    'shadcn-nuxt',
+    '@nuxtjs/i18n',
+    '@nuxt/content',
+    '@vueuse/motion/nuxt',
+    '@nuxtjs/seo',
+    '@nuxt/image',
+    '@nuxt/icon',
   ],
+  css: ['~/assets/css/tailwind.css'],
+  tailwindcss: {
+    cssPath: '~/assets/css/tailwind.css',
+    configPath: '~/tailwind.config.ts',
+  },
+  shadcn: {
+    prefix: '',
+    componentDir: './app/components/ui',
+  },
+  site: {
+    url: 'https://infiag.com',
+    name: 'Infinity Agentic 無限智能',
+    description: '打造 AI/VR 開放生態合作平台',
+    defaultLocale: 'zh-TW',
+  },
+  icon: {
+    serverBundle: 'local',
+  },
+  image: {
+    format: ['webp', 'avif', 'jpg'],
+  },
+  ogImage: {
+    zeroRuntime: true,
+  },
+  i18n: {
+    defaultLocale: 'zh-TW',
+    strategy: 'prefix',
+    langDir: 'locales',
+    locales: [
+      { code: 'zh-TW', language: 'zh-TW', name: '繁體中文', file: 'zh-TW.json', dir: 'ltr' },
+      { code: 'zh-CN', language: 'zh-CN', name: '简体中文', file: 'zh-CN.json', dir: 'ltr' },
+      { code: 'en',    language: 'en-US', name: 'English',  file: 'en.json',    dir: 'ltr' },
+    ],
+    detectBrowserLanguage: {
+      useCookie: true,
+      cookieKey: 'i18n_redirected',
+      redirectOn: 'root',
+      fallbackLocale: 'zh-TW',
+    },
+  },
 })

@@ -1,0 +1,51 @@
+{
+  "site": {
+    "name": "Infinity Agentic 無限智能",
+    "tagline": "打造 AI/VR 開放生態合作平台",
+    "company": "無限智能股份有限公司"
+  },
+  "nav": {
+    "home": "首頁",
+    "about": "關於我們",
+    "platform": "開放平台",
+    "solutions": "解決方案",
+    "solutions_golf": "高爾夫",
+    "solutions_ski": "滑雪",
+    "solutions_vision": "兒童近視矯正",
+    "partners": "合作加盟",
+    "developers": "開發者",
+    "investors": "投資人",
+    "contact": "聯絡我們"
+  },
+  "cta": {
+    "alliance": "聯絡結盟",
+    "learn_platform": "了解平台",
+    "contact": "立即聯繫",
+    "request_deck": "索取 Pitch Deck",
+    "become_partner": "成為合作夥伴"
+  },
+  "home": {
+    "hero_title_1": "打造 AI/VR",
+    "hero_title_2": "開放生態合作平台",
+    "hero_subtitle": "徵求策略合作企業 · 國級/省級代理火熱召集",
+    "problem_title": "市場痛點",
+    "problem_subtitle": "AI/VR 眼鏡規格分歧，閉鎖應用軟體讓消費者重複付費",
+    "solutions_title": "三大利基市場",
+    "solutions_subtitle": "首發專注高消費力、高需求的專業場景",
+    "ecosystem_title": "開放生態系",
+    "ecosystem_subtitle": "硬體廠 · 軟體廠 · 醫療運動機構共生共榮",
+    "aspiration_title": "成為 AI/VR 界的「高通」與「安卓」",
+    "aspiration_subtitle": "建立跨品牌相容的標準規範"
+  },
+  "footer": {
+    "sitemap": "網站地圖",
+    "contact": "聯絡資訊",
+    "legal": "法律",
+    "privacy": "隱私政策",
+    "terms": "使用條款",
+    "copyright": "© 2026 無限智能股份有限公司. All rights reserved."
+  },
+  "lang": {
+    "switch": "語言"
+  }
+}
