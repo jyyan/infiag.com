@@ -141,7 +141,7 @@ const FOUNDERS_RAW: Founder[] = [
   {
     id: 'yangzhixian',
     photo: '/img/yangzhixian/yangzhixian.jpg',
-    english: 'Fangshi',
+    english: 'Yang',
     chinese: { 'zh-TW': '楊智先', 'zh-CN': '杨智先', en: 'Yang Zhixian' },
     role: 'MD',
     title: {
