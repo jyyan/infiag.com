@@ -23,3 +23,6 @@ logs
 .env.*
 !.env.example
 .playwright-mcp/
+
+# Reference materials (manually add with `git add -f` if needed)
+/ref/
