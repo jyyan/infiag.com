@@ -6,6 +6,9 @@
   },
   "nav": {
     "home": "首頁",
+    "lumi": "LUMI",
+    "roadmap": "路線圖",
+    "for_business": "企業合作",
     "about": "關於我們",
     "platform": "開放平台",
     "solutions": "解決方案",
@@ -19,26 +22,103 @@
   },
   "cta": {
     "alliance": "聯絡結盟",
-    "learn_platform": "了解平台",
     "contact": "立即聯繫",
     "request_deck": "索取 Pitch Deck",
-    "become_partner": "成為合作夥伴"
+    "try_lumi": "體驗 LUMI",
+    "learn_roadmap": "了解路線圖",
+    "become_early_user": "成為早期用戶",
+    "business_inquiry": "了解企業合作",
+    "view_investors": "投資人資料"
   },
   "home": {
-    "hero_title_1": "打造 AI/VR",
-    "hero_title_2": "開放生態合作平台",
-    "hero_subtitle": "徵求策略合作企業 · 國級/省級代理火熱召集",
-    "problem_title": "市場痛點",
-    "problem_subtitle": "AI/VR 眼鏡規格分歧，閉鎖應用軟體讓消費者重複付費",
-    "solutions_title": "三大利基市場",
-    "solutions_subtitle": "首發專注高消費力、高需求的專業場景",
-    "ecosystem_title": "開放生態系",
-    "ecosystem_subtitle": "硬體廠 · 軟體廠 · 醫療運動機構共生共榮",
-    "aspiration_title": "成為 AI/VR 界的「高通」與「安卓」",
-    "aspiration_subtitle": "建立跨品牌相容的標準規範",
     "founders_title": "核心創辦人",
     "founders_subtitle": "六位來自投資、技術、財務、品牌、酒業、美業的跨域創辦人，攜手打造 AI/VR 開放平台",
-    "founders_cta": "認識完整團隊"
+    "founders_cta": "認識完整團隊",
+    "lumi": {
+      "seo": {
+        "title": "LUMI · 你身邊的光，陪你動手做",
+        "description": "LUMI 是第一個不只給你答案、還陪你完成最後一哩路的 AI 同伴。Lumi 來自拉丁文 lux，意為光。"
+      },
+      "hero": {
+        "tagline": "Meet LUMI",
+        "title": "你身邊的光，陪你動手做",
+        "desc": "Lumi（拉丁文：光）— 第一個不只給你答案、還陪你完成最後一哩路的 AI 同伴。"
+      },
+      "stuck": {
+        "label": "為什麼需要 LUMI",
+        "title": "第三種被卡住的人",
+        "quote": "「我已經查到答案了，但我還是不會做。」",
+        "body_p1": "媽媽打電話問你怎麼用新的 App。她不是不懂、也不是學不會 — 她只是被卡在「答案到動作」之間的那道無形牆。",
+        "body_p2": "AI 給了她答案。沒有人陪她做完。",
+        "tagline": "LUMI 是第一個專門陪你完成「最後一哩路」的 AI 同伴。"
+      },
+      "pain": {
+        "title": "市場有多大",
+        "subtitle": "「拿到答案後仍然卡住」的人，比你以為的多",
+        "i1_stat": "82%",
+        "i1_label": "AI 用戶仍卡在動作",
+        "i1_desc": "查到答案後依然不知道下一步怎麼做。",
+        "i2_stat": "3.5億+",
+        "i2_label": "全球銀髮數位新手",
+        "i2_desc": "對科技好奇但不敢問、不敢試。",
+        "i3_stat": "10億+",
+        "i3_label": "家庭日常 DIY 場景",
+        "i3_desc": "從修水龍頭到設定路由器，每件事都要重學。",
+        "i4_stat": "70%",
+        "i4_label": "客服問題仍需真人介入",
+        "i4_desc": "AI 能答、卻無法陪客戶完成操作。"
+      },
+      "steps": {
+        "title": "LUMI 怎麼陪你做",
+        "subtitle": "三個步驟，把 AI 從「答案機」變成「同伴」",
+        "s1_title": "看你正在做什麼",
+        "s1_desc": "LUMI 看到你的螢幕、理解當下情境，不需要你解釋。",
+        "s2_title": "用你聽得懂的方式陪你",
+        "s2_desc": "不是丟一段文字答案，而是逐步指引、提醒、確認。",
+        "s3_title": "陪你做完，不只是回答",
+        "s3_desc": "從第一步到最後一步，整段過程都有人陪。"
+      },
+      "roadmap": {
+        "title": "我們要去哪裡",
+        "subtitle": "LUMI 是起點，不是終點。",
+        "c_label": "個人產品軌道",
+        "c_caption": "陪伴從螢幕、走進空間、進入沉浸",
+        "b_label": "企業合作軌道",
+        "b_caption": "現在已可洽談",
+        "v1_year": "2026",
+        "v1_tagline": "螢幕陪伴",
+        "v1_desc": "今年上線。第一個產品，先把最後一哩路走通。",
+        "v2_year": "2027",
+        "v2_tagline": "AR 走進實體",
+        "v2_desc": "從螢幕走進你身邊的空間。",
+        "v3_year": "2028",
+        "v3_tagline": "VR 沉浸場域",
+        "v3_desc": "從觀看到沉浸學習與訓練。",
+        "v4_name": "LUMI for Business",
+        "v4_year": "已開放對話",
+        "v4_tagline": "企業模組服務",
+        "v4_desc": "把 LUMI 引擎授權給企業 — 客服、訓練、品牌 IP。",
+        "b_cta": "了解企業合作方案"
+      },
+      "flywheel": {
+        "title": "為什麼這會持續成長",
+        "subtitle": "雙線收入 × 行為數據飛輪 — 越被陪伴、越聰明",
+        "i1_title": "訂閱收入",
+        "i1_desc": "個人月費 + 家庭方案，黏著度遠高於工具型 AI。",
+        "i2_title": "人類行為大模型",
+        "i2_desc": "每一次「陪做完」都在建立全球第一個人類操作行為資料庫。",
+        "i3_title": "IP 與品牌延伸",
+        "i3_desc": "Lumi 角色從像素走到實體 — 公仔、動畫、品牌聯名。"
+      },
+      "for_business": {
+        "title": "我們也開放給企業",
+        "subtitle": "如果你的客戶、員工或學生也卡在「最後一哩路」，LUMI 引擎可以授權給你。Platform、合作夥伴計畫與 SDK 都還在。"
+      },
+      "closing": {
+        "title": "你相信光嗎？",
+        "subtitle": "LUMI 即將上線。第一批早期用戶，我們挑同路人。"
+      }
+    }
   },
   "founders": {
     "section_title": "創辦團隊",
@@ -58,31 +138,30 @@
   },
   "schema": {
     "org": {
-      "description": "打造 AI/VR 開放生態合作平台,結合硬體、軟體與運動醫療機構建立跨品牌相容標準。",
+      "description": "Infinity Agentic 旗下產品 LUMI — 第一個陪你完成「最後一哩路」的 AI 同伴；同時開放 LUMI 引擎與生態給企業合作。",
       "knowsAbout": [
+        "AI 同伴",
         "人工智慧",
-        "虛擬實境",
-        "智能眼鏡",
-        "AI/VR 開放生態",
-        "高爾夫模擬",
-        "滑雪訓練",
-        "兒童近視矯正",
-        "B2B 合作",
-        "軟硬體聯盟"
+        "人類行為大模型",
+        "螢幕陪伴 AI",
+        "AR / VR 應用",
+        "企業 AI 模組",
+        "B2B AI 授權",
+        "IP 與品牌"
       ]
     },
     "platform": {
       "name": "Infinity Agentic 開放平台",
-      "description": "跨品牌相容的 AI/VR 軟硬體標準與 SDK,讓單一程式碼運行於所有相容裝置。"
+      "description": "跨品牌相容的 AI/VR 軟硬體標準與 SDK，讓單一程式碼運行於所有相容裝置。"
     },
     "partners": {
       "name": "Infinity Agentic 合作夥伴計畫",
-      "description": "硬體廠、軟體廠、運動與醫療機構的策略結盟方案,含捕獲期條款與專利打包授權。"
+      "description": "硬體廠、軟體廠、運動與醫療機構的策略結盟方案，含捕獲期條款與專利打包授權。"
     },
     "solutions": {
       "golf": {
         "name": "AI/VR 高爾夫模擬解決方案",
-        "description": "AI 揮桿分析與沉浸式 VR 練習場,專為高消費力玩家打造。"
+        "description": "AI 揮桿分析與沉浸式 VR 練習場，專為高消費力玩家打造。"
       },
       "ski": {
         "name": "AI/VR 滑雪訓練解決方案",

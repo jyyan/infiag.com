@@ -6,6 +6,9 @@
   },
   "nav": {
     "home": "Home",
+    "lumi": "LUMI",
+    "roadmap": "Roadmap",
+    "for_business": "For Business",
     "about": "About",
     "platform": "Platform",
     "solutions": "Solutions",
@@ -19,26 +22,103 @@
   },
   "cta": {
     "alliance": "Form an Alliance",
-    "learn_platform": "Learn About the Platform",
     "contact": "Contact Us",
     "request_deck": "Request Pitch Deck",
-    "become_partner": "Become a Partner"
+    "try_lumi": "Try LUMI",
+    "learn_roadmap": "See the Roadmap",
+    "become_early_user": "Become an Early User",
+    "business_inquiry": "Talk Business",
+    "view_investors": "Investor Materials"
   },
   "home": {
-    "hero_title_1": "Building the AI/VR",
-    "hero_title_2": "Open Ecosystem Platform",
-    "hero_subtitle": "Seeking strategic partners · National & regional agents",
-    "problem_title": "Market Pain Points",
-    "problem_subtitle": "Fragmented AI/VR specs and locked-in software make consumers pay twice",
-    "solutions_title": "Three Niche Markets",
-    "solutions_subtitle": "Launching with high-value professional verticals",
-    "ecosystem_title": "Open Ecosystem",
-    "ecosystem_subtitle": "Hardware makers · Software developers · Sports & medical institutions",
-    "aspiration_title": "The Qualcomm & Android of AI/VR",
-    "aspiration_subtitle": "Establishing cross-brand interoperability standards",
     "founders_title": "Meet the Founders",
     "founders_subtitle": "Six co-founders from investment, technology, finance, brand, wine and beauty — building the AI/VR open platform together",
-    "founders_cta": "Meet the Full Team"
+    "founders_cta": "Meet the Full Team",
+    "lumi": {
+      "seo": {
+        "title": "LUMI — The light beside you, with hands.",
+        "description": "LUMI is the first AI companion that doesn't just answer — it walks the last mile with you. Lumi (Latin: lux, light) by Infinity Agentic."
+      },
+      "hero": {
+        "tagline": "Meet LUMI",
+        "title": "The light beside you—now with hands.",
+        "desc": "Lumi (Latin: lux, light)—the first AI companion that doesn't just answer, but walks the last mile with you."
+      },
+      "stuck": {
+        "label": "Why LUMI",
+        "title": "The third kind of stuck.",
+        "quote": "“I already have the answer. I still don't know how to do it.”",
+        "body_p1": "Your mom calls about a new app. She isn't slow, and she isn't unwilling — she's stuck on the invisible wall between knowing and doing.",
+        "body_p2": "AI gave her the answer. Nobody walked her through.",
+        "tagline": "LUMI is the first AI built for the last mile — the part where you actually have to do the thing."
+      },
+      "pain": {
+        "title": "How big is this gap?",
+        "subtitle": "More people are stuck after the answer than you think.",
+        "i1_stat": "82%",
+        "i1_label": "of AI users still stuck",
+        "i1_desc": "They got the answer. They still don't know step one.",
+        "i2_stat": "350M+",
+        "i2_label": "digital newcomers worldwide",
+        "i2_desc": "Curious about technology, afraid to ask, afraid to try.",
+        "i3_stat": "1B+",
+        "i3_label": "everyday DIY scenarios",
+        "i3_desc": "From a leaky faucet to a router setup — every task is a relearn.",
+        "i4_stat": "70%",
+        "i4_label": "of customer-service issues need a human",
+        "i4_desc": "AI can answer. It can't walk the customer through the doing."
+      },
+      "steps": {
+        "title": "How LUMI walks with you",
+        "subtitle": "Three steps that turn AI from an answer-machine into a companion.",
+        "s1_title": "It sees what you're doing",
+        "s1_desc": "LUMI sees your screen and reads the moment. You don't have to explain.",
+        "s2_title": "It walks at your pace",
+        "s2_desc": "Not a wall of text — step-by-step, gentle prompts, real confirmation.",
+        "s3_title": "It stays till the end",
+        "s3_desc": "From step one to done, you're not alone for a single click."
+      },
+      "roadmap": {
+        "title": "Where we're going",
+        "subtitle": "LUMI is the start, not the end.",
+        "c_label": "Consumer track",
+        "c_caption": "From screen, into space, into immersion.",
+        "b_label": "Business track",
+        "b_caption": "Open for conversation now.",
+        "v1_year": "2026",
+        "v1_tagline": "On-screen companion",
+        "v1_desc": "Shipping this year. The first product — closing the last mile on screen.",
+        "v2_year": "2027",
+        "v2_tagline": "AR — into your space",
+        "v2_desc": "From the screen into the space around you.",
+        "v3_year": "2028",
+        "v3_tagline": "VR — fully immersive",
+        "v3_desc": "From watching to fully immersive learning and training.",
+        "v4_name": "LUMI for Business",
+        "v4_year": "Open for conversation",
+        "v4_tagline": "Enterprise modules",
+        "v4_desc": "License the LUMI engine — for support, training, and brand IP.",
+        "b_cta": "Talk to us about business"
+      },
+      "flywheel": {
+        "title": "Why this keeps compounding",
+        "subtitle": "Two revenue lines × a behavior-data flywheel — the more we walk with people, the smarter we get.",
+        "i1_title": "Subscriptions",
+        "i1_desc": "Personal and family plans. Companionship beats one-shot tools on retention.",
+        "i2_title": "Human-behavior model",
+        "i2_desc": "Every walked-through task builds a first-of-its-kind dataset of how humans actually do things.",
+        "i3_title": "IP & brand extension",
+        "i3_desc": "Lumi the character — from pixels to plush, animation, and partnerships."
+      },
+      "for_business": {
+        "title": "We're open for business too",
+        "subtitle": "If your customers, employees, or students get stuck on the last mile, the LUMI engine is licensable. Platform, partner program, and SDK are still here."
+      },
+      "closing": {
+        "title": "Do you believe in light?",
+        "subtitle": "LUMI is shipping soon. We pick our early users carefully."
+      }
+    }
   },
   "founders": {
     "section_title": "Founding Team",
@@ -58,17 +138,16 @@
   },
   "schema": {
     "org": {
-      "description": "Building an open AI/VR ecosystem platform that aligns hardware vendors, software developers, and sports/medical institutions on cross-brand interoperability standards.",
+      "description": "Infinity Agentic builds LUMI — the first AI companion that walks the last mile with you — and licenses the LUMI engine to enterprises.",
       "knowsAbout": [
+        "AI Companion",
         "Artificial Intelligence",
-        "Virtual Reality",
-        "Smart Glasses",
-        "AI/VR Open Ecosystem",
-        "Golf Simulation",
-        "Ski Training",
-        "Pediatric Myopia Correction",
-        "B2B Partnership",
-        "Hardware-Software Alliance"
+        "Human Behavior Model",
+        "On-Screen AI Companion",
+        "AR / VR Applications",
+        "Enterprise AI Modules",
+        "B2B AI Licensing",
+        "Brand IP"
       ]
     },
     "platform": {

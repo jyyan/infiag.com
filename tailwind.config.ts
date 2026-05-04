@@ -27,6 +27,12 @@ export default <Partial<Config>>{
           bright:  'hsl(var(--accent-bright))',
           deep:    'hsl(var(--accent-deep))',
         },
+        lumi: {
+          purple: 'hsl(var(--lumi-purple))',
+          pink:   'hsl(var(--lumi-pink))',
+          cyan:   'hsl(var(--lumi-cyan))',
+          soft:   'hsl(var(--lumi-soft))',
+        },
         fg: {
           primary:   'hsl(var(--fg-primary))',
           secondary: 'hsl(var(--fg-secondary))',
@@ -49,12 +55,17 @@ export default <Partial<Config>>{
         'gradient-hero':  'radial-gradient(ellipse at top, hsl(var(--accent-deep) / 0.4), transparent 70%)',
         'gradient-glow':  'linear-gradient(135deg, hsl(var(--accent-glow)) 0%, hsl(var(--accent-bright)) 100%)',
         'gradient-text':  'linear-gradient(90deg, #fff 0%, hsl(var(--accent-bright)) 100%)',
+        'gradient-lumi':  'linear-gradient(135deg, hsl(var(--lumi-purple)) 0%, hsl(var(--lumi-pink)) 100%)',
+        'gradient-lumi-text': 'linear-gradient(90deg, hsl(var(--lumi-pink)) 0%, hsl(var(--lumi-purple)) 100%)',
+        'gradient-lumi-halo': 'radial-gradient(ellipse 60% 50% at 50% 50%, hsl(var(--lumi-purple) / 0.45) 0%, hsl(var(--lumi-pink) / 0.18) 50%, transparent 75%)',
       },
       boxShadow: {
         'glow-sm':    '0 0 12px hsl(var(--accent-glow) / 0.4)',
         'glow':       '0 0 24px hsl(var(--accent-glow) / 0.5)',
         'glow-lg':    '0 0 48px hsl(var(--accent-glow) / 0.6)',
         'inner-glow': 'inset 0 0 16px hsl(var(--accent-glow) / 0.3)',
+        'lumi-glow':    '0 0 24px hsl(var(--lumi-purple) / 0.55)',
+        'lumi-glow-lg': '0 0 64px hsl(var(--lumi-purple) / 0.7)',
       },
       backdropBlur: { glass: '12px' },
       fontFamily: {

@@ -5,7 +5,8 @@ const { alliance, pitchDeck } = useMailto()
 const { founders } = useFounders()
 
 usePageSeo({
-  title: t('home.hero_title_1') + ' ' + t('home.hero_title_2'),
+  title: t('home.lumi.seo.title'),
+  description: t('home.lumi.seo.description'),
 })
 
 const lang = useLocaleLang()
@@ -13,256 +14,109 @@ useSchemaOrg([
   defineWebPage({
     '@id': 'https://infiag.com/#webpage',
     url: 'https://infiag.com',
-    name: () => `${t('home.hero_title_1')} ${t('home.hero_title_2')}`,
-    description: () => t('home.hero_subtitle'),
+    name: () => t('home.lumi.seo.title'),
+    description: () => t('home.lumi.seo.description'),
     inLanguage: lang,
     isPartOf: { '@id': 'https://infiag.com/#website' },
     about: { '@id': 'https://infiag.com/#organization' },
   }),
 ])
 
-const isEn = computed(() => locale.value === 'en')
-
-const problems = computed(() => [
-  { icon: 'puzzle',     title: isEn.value ? 'Spec Fragmentation' : '規格分歧',
-    desc: isEn.value
-      ? 'AI/VR brands lock users into incompatible ecosystems. Each headset speaks its own protocol; software written for one cannot run on another.'
-      : 'AI/VR 各家硬體規格各自為政、互不相容。每款眼鏡用自己的協定，A 品牌的軟體無法搬到 B 品牌上跑。' },
-  { icon: 'lock',       title: isEn.value ? 'Software Lock-in' : '軟體閉鎖',
-    desc: isEn.value
-      ? 'Apps built for Brand A cannot run on Brand B hardware. Developers ship the same logic three times for three SKUs.'
-      : 'A 品牌軟體無法在 B 品牌硬體上運行。開發者得為三家硬體寫三套，重複勞動沒有盡頭。' },
-  { icon: 'wallet',     title: isEn.value ? 'Wasted Spend' : '消費者重複付費',
-    desc: isEn.value
-      ? 'Consumers pay twice when switching hardware — and abandon the category in frustration.'
-      : '更換硬體就要重買軟體。消費者要嘛重複付費，要嘛乾脆放棄整個品類。' },
+const painPoints = computed(() => [
+  { stat: t('home.lumi.pain.i1_stat'), label: t('home.lumi.pain.i1_label'), desc: t('home.lumi.pain.i1_desc'), icon: 'message-circle-question' },
+  { stat: t('home.lumi.pain.i2_stat'), label: t('home.lumi.pain.i2_label'), desc: t('home.lumi.pain.i2_desc'), icon: 'users' },
+  { stat: t('home.lumi.pain.i3_stat'), label: t('home.lumi.pain.i3_label'), desc: t('home.lumi.pain.i3_desc'), icon: 'home' },
+  { stat: t('home.lumi.pain.i4_stat'), label: t('home.lumi.pain.i4_label'), desc: t('home.lumi.pain.i4_desc'), icon: 'headphones' },
 ])
 
-const solutions = computed(() => [
-  { to: localePath('/solutions/golf'),
-    icon: 'flag',
-    tagline: isEn.value ? 'NICHE 01' : '利基市場 01',
-    title: t('nav.solutions_golf'),
-    description: isEn.value
-      ? 'AI swing analysis and immersive VR practice for serious players'
-      : 'AI 揮桿分析、沉浸式 VR 練習場，專為高消費力玩家打造' },
-  { to: localePath('/solutions/ski'),
-    icon: 'mountain',
-    tagline: isEn.value ? 'NICHE 02' : '利基市場 02',
-    title: t('nav.solutions_ski'),
-    description: isEn.value
-      ? 'Pre-season virtual training and on-slope AR coaching for skiers'
-      : '雪季前虛擬訓練、雪道上 AR 教練輔助' },
-  { to: localePath('/solutions/vision'),
-    icon: 'eye',
-    tagline: isEn.value ? 'NICHE 03' : '利基市場 03',
-    title: t('nav.solutions_vision'),
-    description: isEn.value
-      ? 'Clinically-grounded myopia control system for children'
-      : '結合臨床標準，給家長與兒童的近視矯正預防方案' },
+const steps = computed(() => [
+  { step: '01', title: t('home.lumi.steps.s1_title'), desc: t('home.lumi.steps.s1_desc'), icon: 'eye' },
+  { step: '02', title: t('home.lumi.steps.s2_title'), desc: t('home.lumi.steps.s2_desc'), icon: 'message-circle' },
+  { step: '03', title: t('home.lumi.steps.s3_title'), desc: t('home.lumi.steps.s3_desc'), icon: 'check-check' },
 ])
 
-const whyNow = computed(() => [
-  { icon: 'trending-up', metric: '40%+', label: isEn.value ? 'Annual AI/VR Hardware Growth' : 'AI/VR 硬體年增率',
-    desc: isEn.value ? 'The wearable category is past its inflection point.' : '穿戴市場已過拐點，進入規模成長期。' },
-  { icon: 'users',       metric: '500M', label: isEn.value ? 'Children with Myopia (Asia)' : '亞洲近視兒童人數',
-    desc: isEn.value ? 'Public-health crisis without scalable tools.' : '公衛問題缺少可規模化的科技解方。' },
-  { icon: 'globe',       metric: '50+',  label: isEn.value ? 'Brands Without a Common Layer' : '缺乏共通層的品牌',
-    desc: isEn.value ? 'A unified platform is the missing piece.' : '共通標準正是市場目前缺的那一塊。' },
+const cTrack = computed(() => [
+  { code: 'v1', name: 'LUMI',    year: t('home.lumi.roadmap.v1_year'), tagline: t('home.lumi.roadmap.v1_tagline'), desc: t('home.lumi.roadmap.v1_desc') },
+  { code: 'v2', name: 'Studio',  year: t('home.lumi.roadmap.v2_year'), tagline: t('home.lumi.roadmap.v2_tagline'), desc: t('home.lumi.roadmap.v2_desc') },
+  { code: 'v3', name: 'Effects', year: t('home.lumi.roadmap.v3_year'), tagline: t('home.lumi.roadmap.v3_tagline'), desc: t('home.lumi.roadmap.v3_desc') },
 ])
 
-const process = computed(() => [
-  { step: '01',
-    title: isEn.value ? 'Reach Out' : '聯繫接洽',
-    desc: isEn.value ? 'Email our marketing team via the alliance form. We respond within 5 business days.'
-                     : '透過下方 mailto 寄信給 BSE#91 營銷組。我們在 5 個工作天內回覆。' },
-  { step: '02',
-    title: isEn.value ? 'Discovery Call' : '線上會議',
-    desc: isEn.value ? 'A 30-minute video call to align on scope, technical fit, and partnership shape.'
-                     : '30 分鐘線上會議，對齊範圍、技術契合度、合作形態。' },
-  { step: '03',
-    title: isEn.value ? 'NDA & Due Diligence' : '簽 NDA、深入評估',
-    desc: isEn.value ? 'Mutual NDA, then we share roadmap, IP, financials, and capture-period clauses.'
-                     : '雙向保密協議簽訂，分享路線圖、專利、財務、捕獲期條款。' },
-  { step: '04',
-    title: isEn.value ? 'Contract & Launch' : '簽約啟動',
-    desc: isEn.value ? 'Define the deliverables and ship — joint marketing follows on agreed milestones.'
-                     : '確定範圍簽正式合約，依里程碑啟動聯合行銷。' },
-])
+const bTrack = computed(() => ({
+  code: 'v4',
+  name: t('home.lumi.roadmap.v4_name'),
+  year: t('home.lumi.roadmap.v4_year'),
+  tagline: t('home.lumi.roadmap.v4_tagline'),
+  desc: t('home.lumi.roadmap.v4_desc'),
+}))
 
-const demos = computed(() => [
-  {
-    src: 'https://cdn.infiag.com/media/Golf%20AI%20Training.mp4',
-    title: isEn.value ? 'Golf AI Training' : 'Golf AI 訓練',
-    caption: isEn.value
-      ? 'AI swing analysis with broadcast-grade feedback inside VR.'
-      : 'VR 沉浸式 AI 揮桿分析，給予玩家轉播級回饋。',
-  },
-  {
-    src: 'https://cdn.infiag.com/media/Children%20Myopia%20Control.mp4',
-    title: isEn.value ? 'Children Myopia Control' : '兒童近視矯正',
-    caption: isEn.value
-      ? 'Clinically-grounded daily vision training for kids.'
-      : '結合臨床標準的兒童每日視覺訓練。',
-  },
-  {
-    src: 'https://cdn.infiag.com/media/Learn%20Any%20Technical.mp4',
-    title: isEn.value ? 'Learn Any Technical Skill' : '學習任何技術',
-    caption: isEn.value
-      ? 'Immersive, hands-on technical learning on Infinity SDK.'
-      : '在 Infinity SDK 上打造沉浸式、實作導向的技術學習。',
-  },
-])
-
-const proofPoints = computed(() => [
-  { icon: 'shield-check', title: isEn.value ? 'Capture-Period Clause'   : '捕獲期條款',
-    desc: isEn.value ? 'Same royalty rate during licensee\'s standard product lifecycle — no surprise hikes.'
-                     : '授權期內費率不變，未來新專利同條款延伸。' },
-  { icon: 'package',      title: isEn.value ? 'Bundled IP'              : '專利打包授權',
-    desc: isEn.value ? 'We bundle the third-party patents you would otherwise license separately.'
-                     : '一次打包必需的第三方專利，免去整合難題。' },
-  { icon: 'unplug',       title: isEn.value ? 'No Hardware Competition' : '不與你競爭',
-    desc: isEn.value ? 'We license tech only; we do not manufacture devices that compete with our partners.'
-                     : '我們只授權技術、不做硬體，不會與你的產品線競爭。' },
+const flywheel = computed(() => [
+  { icon: 'users',    title: t('home.lumi.flywheel.i1_title'), desc: t('home.lumi.flywheel.i1_desc') },
+  { icon: 'database', title: t('home.lumi.flywheel.i2_title'), desc: t('home.lumi.flywheel.i2_desc') },
+  { icon: 'sparkles', title: t('home.lumi.flywheel.i3_title'), desc: t('home.lumi.flywheel.i3_desc') },
 ])
 </script>
 
 <template>
   <div>
-    <HeroBanner
-      :title1="t('home.hero_title_1')"
-      :title2="t('home.hero_title_2')"
-      :subtitle="t('home.hero_subtitle')"
-      :primary-cta-label="t('cta.alliance')"
-      :primary-cta-href="alliance(locale)"
-      :secondary-cta-label="t('cta.learn_platform')"
-      :secondary-cta-to="localePath('/platform')"
+    <!-- 1. Hero -->
+    <HeroLumi
+      :tagline="t('home.lumi.hero.tagline')"
+      :title="t('home.lumi.hero.title')"
+      :desc="t('home.lumi.hero.desc')"
+      :primary-cta-label="t('cta.try_lumi')"
+      primary-cta-href="https://lumi.infiag.com/index.html"
+      :secondary-cta-label="t('cta.learn_roadmap')"
+      :secondary-cta-to="localePath('/') + '#roadmap'"
     />
 
-    <!-- Problems -->
-    <SectionContainer
-      :title="t('home.problem_title')"
-      :subtitle="t('home.problem_subtitle')"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        <FeatureCard
-          v-for="p in problems"
-          :key="p.title"
-          :icon="p.icon"
-          :title="p.title"
-          :description="p.desc"
-        />
-      </div>
-    </SectionContainer>
+    <!-- 2. Stuck person opening -->
+    <StuckPersonSection
+      :label="t('home.lumi.stuck.label')"
+      :title="t('home.lumi.stuck.title')"
+      :quote="t('home.lumi.stuck.quote')"
+      :body-p1="t('home.lumi.stuck.body_p1')"
+      :body-p2="t('home.lumi.stuck.body_p2')"
+      :tagline="t('home.lumi.stuck.tagline')"
+    />
 
-    <!-- Why now (market timing) -->
-    <SectionContainer
-      :title="isEn ? 'Why Now' : '為什麼是現在'"
-      :subtitle="isEn ? 'A unique window where market readiness, hardware maturity, and policy alignment converge.'
-                      : '市場成熟度、硬體進化、政策方向罕見地三線交會的時間視窗。'"
-      variant="tech"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-10">
-        <FadeInUp v-for="(item, i) in whyNow" :key="item.label" :delay="i * 100">
-          <div class="glass-card p-8 lg:p-10 space-y-4 text-center group">
-            <div class="w-14 h-14 rounded-2xl bg-bg-elevated flex items-center justify-center mx-auto border border-accent-glow/30 group-hover:shadow-glow transition-shadow">
-              <Icon :name="`lucide:${item.icon}`" class="w-7 h-7 text-accent-bright" />
-            </div>
-            <div class="text-4xl lg:text-5xl font-display font-bold text-gradient">
-              {{ item.metric }}
-            </div>
-            <div class="text-sm uppercase tracking-wider text-accent-bright">{{ item.label }}</div>
-            <p class="text-fg-secondary leading-relaxed">{{ item.desc }}</p>
-          </div>
-        </FadeInUp>
-      </div>
-    </SectionContainer>
+    <!-- 3. Pain point stats -->
+    <PainPointStats
+      :title="t('home.lumi.pain.title')"
+      :subtitle="t('home.lumi.pain.subtitle')"
+      :items="painPoints"
+    />
 
-    <!-- Three niche solutions -->
-    <SectionContainer
-      :title="t('home.solutions_title')"
-      :subtitle="t('home.solutions_subtitle')"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        <SolutionCard
-          v-for="s in solutions"
-          :key="s.to"
-          :to="s.to"
-          :icon="s.icon"
-          :tagline="s.tagline"
-          :title="s.title"
-          :description="s.description"
-        />
-      </div>
-    </SectionContainer>
+    <!-- 4. Three steps demo -->
+    <LumiThreeSteps
+      :title="t('home.lumi.steps.title')"
+      :subtitle="t('home.lumi.steps.subtitle')"
+      :steps="steps"
+    />
 
-    <!-- Demo Gallery — three niches in motion -->
-    <SectionContainer
-      :title="isEn ? 'See It in Motion' : '實機演示'"
-      :subtitle="isEn
-        ? 'Three live demos from our launch niches — golf, children\'s vision, and technical learning.'
-        : '三段首發利基的實機示範：高爾夫、兒童近視、技術學習。'"
-      variant="tech"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
-        <FadeInUp v-for="(d, i) in demos" :key="d.src" :delay="i * 100">
-          <VideoCard :src="d.src" :title="d.title" :caption="d.caption" />
-        </FadeInUp>
-      </div>
-    </SectionContainer>
+    <!-- 5. Roadmap (anchor target for hero CTA) -->
+    <div id="roadmap">
+      <RoadmapDualTrack
+        :title="t('home.lumi.roadmap.title')"
+        :subtitle="t('home.lumi.roadmap.subtitle')"
+        :c-label="t('home.lumi.roadmap.c_label')"
+        :c-caption="t('home.lumi.roadmap.c_caption')"
+        :b-label="t('home.lumi.roadmap.b_label')"
+        :b-caption="t('home.lumi.roadmap.b_caption')"
+        :c-items="cTrack"
+        :b-item="bTrack"
+        :b-cta-label="t('home.lumi.roadmap.b_cta')"
+        :b-cta-to="localePath('/platform')"
+      />
+    </div>
 
-    <!-- Open ecosystem visual -->
-    <SectionContainer
-      :title="t('home.ecosystem_title')"
-      :subtitle="t('home.ecosystem_subtitle')"
-      variant="tight"
-    >
-      <FadeInUp>
-        <div class="flex justify-center py-8">
-          <InfinityLogoSVG :size="240" />
-        </div>
-      </FadeInUp>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-4xl mx-auto">
-        <FeatureCard
-          icon="cpu"
-          :title="isEn ? 'Hardware Makers' : '硬體製造商'"
-          :description="isEn ? 'Adopt our open spec — skip the foundational R&D and ship faster.'
-                             : '採用我們的開放規範，免除底層研發、加速上市。'"
-        />
-        <FeatureCard
-          icon="code"
-          :title="isEn ? 'Software Developers' : '軟體開發商'"
-          :description="isEn ? 'One codebase runs across every Infinity-compliant device. Royalties low or waived in launch period.'
-                             : '一份程式碼跨所有相容硬體運行。上市期權利金低或全免。'"
-        />
-        <FeatureCard
-          icon="hospital"
-          :title="isEn ? 'Sports & Medical Institutions' : '醫療與運動機構'"
-          :description="isEn ? 'Niche-market channels and clinical validation as part of the partner program.'
-                             : '利基通路、臨床背書，全部納入合作計畫。'"
-        />
-      </div>
-    </SectionContainer>
+    <!-- 6. Business flywheel -->
+    <BusinessFlywheel
+      :title="t('home.lumi.flywheel.title')"
+      :subtitle="t('home.lumi.flywheel.subtitle')"
+      :items="flywheel"
+    />
 
-    <!-- Why partner with us — proof points borrowed from BM.md (capture period, bundled IP, no hardware compete) -->
-    <SectionContainer
-      :title="isEn ? 'Why Partner with Us' : '為什麼選我們'"
-      :subtitle="isEn ? 'Drawing from Qualcomm and Sony PlayStation playbooks — terms designed to make joining a no-brainer.'
-                      : '借鏡 Qualcomm 與 Sony PlayStation 模式：把加入這件事，設計成不必猶豫的選擇。'"
-      variant="tech"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
-        <FeatureCard
-          v-for="p in proofPoints"
-          :key="p.title"
-          :icon="p.icon"
-          :title="p.title"
-          :description="p.desc"
-        />
-      </div>
-    </SectionContainer>
-
-    <!-- Founders teaser -->
+    <!-- 7. Founders (reuse) -->
     <SectionContainer
       :title="t('home.founders_title')"
       :subtitle="t('home.founders_subtitle')"
@@ -278,7 +132,7 @@ const proofPoints = computed(() => [
       <div class="text-center mt-10">
         <NuxtLink
           :to="localePath('/about') + '#team'"
-          class="inline-flex items-center gap-2 text-accent-bright font-medium hover:gap-3 transition-all"
+          class="inline-flex items-center gap-2 text-lumi-pink font-medium hover:gap-3 transition-all"
         >
           <span>{{ t('home.founders_cta') }}</span>
           <Icon name="lucide:arrow-right" class="w-4 h-4" />
@@ -286,85 +140,81 @@ const proofPoints = computed(() => [
       </div>
     </SectionContainer>
 
-    <!-- 4-step partnership process -->
-    <SectionContainer
-      :title="isEn ? 'How to Partner' : '合作流程'"
-      :subtitle="isEn ? 'Four lightweight steps from first email to launch.'
-                      : '從第一封 email 到正式啟動，四個簡潔步驟。'"
-    >
-      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        <FadeInUp v-for="(step, i) in process" :key="step.step" :delay="i * 120">
-          <div class="glass-card p-6 lg:p-8 h-full space-y-4 relative overflow-hidden group">
-            <div class="absolute -top-4 -right-4 text-7xl lg:text-8xl font-display font-bold text-accent-glow/10 group-hover:text-accent-glow/20 transition-colors">
-              {{ step.step }}
-            </div>
-            <div class="relative">
-              <div class="text-xs uppercase tracking-widest text-accent-bright font-mono">
-                STEP {{ step.step }}
-              </div>
-              <h3 class="text-xl font-display font-bold mt-2">{{ step.title }}</h3>
-              <p class="text-fg-secondary leading-relaxed mt-3">{{ step.desc }}</p>
-            </div>
-          </div>
-        </FadeInUp>
-      </div>
-    </SectionContainer>
-
-    <!-- Stats -->
+    <!-- 8. For Business entry -->
     <SectionContainer variant="tight">
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-12 py-8">
-        <StatNumber :value="3" suffix="+" :label="isEn ? 'Launch Niches' : '首發利基'" />
-        <StatNumber :value="100" suffix="%" :label="isEn ? 'Open Standard' : '開放規範'" />
-        <StatNumber :value="1" prefix="∞" suffix="" :label="isEn ? 'Ecosystem' : '生態系統'" />
+      <div
+        class="glass-card p-8 lg:p-12 relative overflow-hidden"
+      >
+        <div class="absolute inset-0 grid-tech opacity-25 pointer-events-none" />
+        <div class="relative grid grid-cols-1 md:grid-cols-[1fr_auto] gap-6 items-center">
+          <div class="space-y-3">
+            <h3 class="text-2xl md:text-3xl font-display font-bold text-fg-primary">
+              {{ t('home.lumi.for_business.title') }}
+            </h3>
+            <p class="text-fg-secondary leading-relaxed max-w-2xl">
+              {{ t('home.lumi.for_business.subtitle') }}
+            </p>
+          </div>
+          <div class="flex flex-wrap gap-3">
+            <NuxtLink
+              :to="localePath('/platform')"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-accent-glow/40 text-accent-bright hover:bg-accent-glow/10 transition-colors text-sm font-medium"
+            >
+              {{ t('nav.platform') }}
+              <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            </NuxtLink>
+            <NuxtLink
+              :to="localePath('/partners')"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full border border-accent-glow/40 text-accent-bright hover:bg-accent-glow/10 transition-colors text-sm font-medium"
+            >
+              {{ t('nav.partners') }}
+              <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            </NuxtLink>
+            <a
+              :href="alliance(locale)"
+              class="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-accent-glow/15 border border-accent-glow/60 text-accent-bright hover:bg-accent-glow/25 transition-colors text-sm font-medium"
+            >
+              {{ t('cta.business_inquiry') }}
+              <Icon name="lucide:arrow-right" class="w-4 h-4" />
+            </a>
+          </div>
+        </div>
       </div>
     </SectionContainer>
 
-    <!-- Closing CTA — alliance + investor split -->
+    <!-- 9. Closing CTA — early user + investor split -->
     <SectionContainer variant="tight">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-        <a :href="alliance(locale)" class="group block">
-          <div class="glass-card p-8 lg:p-10 h-full space-y-4 hover:shadow-glow-lg transition-shadow relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div class="relative space-y-3">
-              <Icon name="lucide:handshake" class="w-10 h-10 text-accent-bright" />
-              <h3 class="text-2xl font-display font-bold">
-                {{ isEn ? 'Become a Partner' : '成為合作夥伴' }}
-              </h3>
-              <p class="text-fg-secondary">
-                {{ isEn ? 'Hardware, software, sports, medical — let\'s talk.' : '硬體 / 軟體 / 運動 / 醫療都歡迎。' }}
-              </p>
-              <span class="inline-flex items-center gap-2 text-accent-bright font-medium pt-2 group-hover:gap-3 transition-all">
-                {{ t('cta.alliance') }} <Icon name="lucide:arrow-right" class="w-4 h-4" />
-              </span>
-            </div>
+      <div
+        class="glass-card p-12 lg:p-16 text-center relative overflow-hidden"
+        style="background: radial-gradient(ellipse at top, hsl(var(--lumi-purple) / 0.25) 0%, transparent 70%);"
+      >
+        <div class="absolute inset-0 grid-tech opacity-25 pointer-events-none" />
+        <div class="relative space-y-6">
+          <h3
+            v-motion
+            :initial="{ opacity: 0, y: 20 }"
+            :visible-once="{ opacity: 1, y: 0, transition: { duration: 600 } }"
+            class="text-3xl md:text-4xl lg:text-5xl font-display font-bold text-lumi-gradient"
+          >
+            {{ t('home.lumi.closing.title') }}
+          </h3>
+          <p class="text-fg-secondary text-base md:text-lg max-w-2xl mx-auto">
+            {{ t('home.lumi.closing.subtitle') }}
+          </p>
+          <div class="flex flex-col sm:flex-row gap-4 justify-center pt-4">
+            <a :href="alliance(locale)">
+              <button class="btn-lumi text-base px-8 py-4">
+                {{ t('cta.become_early_user') }}
+              </button>
+            </a>
+            <NuxtLink :to="localePath('/investors')">
+              <button class="inline-flex items-center justify-center px-8 py-4 rounded-full border border-lumi-purple/50 text-lumi-pink hover:bg-lumi-purple/10 transition-colors text-base font-medium">
+                {{ t('cta.view_investors') }}
+              </button>
+            </NuxtLink>
           </div>
-        </a>
-        <a :href="pitchDeck(locale)" class="group block">
-          <div class="glass-card p-8 lg:p-10 h-full space-y-4 hover:shadow-glow-lg transition-shadow relative overflow-hidden">
-            <div class="absolute inset-0 bg-gradient-hero opacity-0 group-hover:opacity-100 transition-opacity" />
-            <div class="relative space-y-3">
-              <Icon name="lucide:briefcase" class="w-10 h-10 text-accent-bright" />
-              <h3 class="text-2xl font-display font-bold">
-                {{ isEn ? 'Investor Materials' : '投資人資料' }}
-              </h3>
-              <p class="text-fg-secondary">
-                {{ isEn ? 'Request the full pitch deck and financials under NDA.' : '索取完整 Pitch Deck 與財務資料，於保密協議下分享。' }}
-              </p>
-              <span class="inline-flex items-center gap-2 text-accent-bright font-medium pt-2 group-hover:gap-3 transition-all">
-                {{ t('cta.request_deck') }} <Icon name="lucide:arrow-right" class="w-4 h-4" />
-              </span>
-            </div>
-          </div>
-        </a>
+        </div>
       </div>
     </SectionContainer>
-
-    <!-- Final aspirational CTA -->
-    <CTASection
-      :title="t('home.aspiration_title')"
-      :subtitle="t('home.aspiration_subtitle')"
-      :cta-label="t('cta.alliance')"
-      :cta-href="alliance(locale)"
-    />
   </div>
 </template>
