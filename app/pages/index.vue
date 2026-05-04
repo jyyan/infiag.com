@@ -2,6 +2,7 @@
 const { t, locale } = useI18n()
 const localePath = useLocalePath()
 const { alliance, pitchDeck } = useMailto()
+const { founders } = useFounders()
 
 usePageSeo({
   title: t('home.hero_title_1') + ' ' + t('home.hero_title_2'),
@@ -258,6 +259,30 @@ const proofPoints = computed(() => [
           :title="p.title"
           :description="p.desc"
         />
+      </div>
+    </SectionContainer>
+
+    <!-- Founders teaser -->
+    <SectionContainer
+      :title="t('home.founders_title')"
+      :subtitle="t('home.founders_subtitle')"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+        <FounderCard
+          v-for="f in founders"
+          :key="f.id"
+          :founder="f"
+          variant="compact"
+        />
+      </div>
+      <div class="text-center mt-10">
+        <NuxtLink
+          :to="localePath('/about') + '#team'"
+          class="inline-flex items-center gap-2 text-accent-bright font-medium hover:gap-3 transition-all"
+        >
+          <span>{{ t('home.founders_cta') }}</span>
+          <Icon name="lucide:arrow-right" class="w-4 h-4" />
+        </NuxtLink>
       </div>
     </SectionContainer>
 

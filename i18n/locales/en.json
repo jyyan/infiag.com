@@ -35,7 +35,15 @@
     "ecosystem_title": "Open Ecosystem",
     "ecosystem_subtitle": "Hardware makers · Software developers · Sports & medical institutions",
     "aspiration_title": "The Qualcomm & Android of AI/VR",
-    "aspiration_subtitle": "Establishing cross-brand interoperability standards"
+    "aspiration_subtitle": "Establishing cross-brand interoperability standards",
+    "founders_title": "Meet the Founders",
+    "founders_subtitle": "Six co-founders from investment, technology, finance, brand, wine and beauty — building the AI/VR open platform together",
+    "founders_cta": "Meet the Full Team"
+  },
+  "founders": {
+    "section_title": "Founding Team",
+    "section_subtitle": "Six founders across industries and markets bringing investment vision, technical depth, brand experience and capital thinking into Infinity Agentic.",
+    "profile_link": "View Full Profile"
   },
   "footer": {
     "sitemap": "Sitemap",

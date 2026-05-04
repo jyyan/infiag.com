@@ -1,5 +1,6 @@
 <script setup lang="ts">
 const { t, locale } = useI18n()
+const { founders } = useFounders()
 
 const titleByLocale = computed(() => ({
   'zh-TW': '關於 Infinity Agentic',
@@ -61,6 +62,22 @@ useSchemaOrg([
           :icon="'star'"
           :title="`${s.letter} — ${s.title}`"
           :description="s.desc"
+        />
+      </div>
+    </SectionContainer>
+
+    <SectionContainer
+      id="team"
+      :title="t('founders.section_title')"
+      :subtitle="t('founders.section_subtitle')"
+      variant="tech"
+    >
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <FounderCard
+          v-for="f in founders"
+          :key="f.id"
+          :founder="f"
+          variant="full"
         />
       </div>
     </SectionContainer>

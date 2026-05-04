@@ -35,7 +35,15 @@
     "ecosystem_title": "開放生態系",
     "ecosystem_subtitle": "硬體廠 · 軟體廠 · 醫療運動機構共生共榮",
     "aspiration_title": "成為 AI/VR 界的「高通」與「安卓」",
-    "aspiration_subtitle": "建立跨品牌相容的標準規範"
+    "aspiration_subtitle": "建立跨品牌相容的標準規範",
+    "founders_title": "核心創辦人",
+    "founders_subtitle": "六位來自投資、技術、財務、品牌、酒業、美業的跨域創辦人，攜手打造 AI/VR 開放平台",
+    "founders_cta": "認識完整團隊"
+  },
+  "founders": {
+    "section_title": "創辦團隊",
+    "section_subtitle": "跨產業、跨市場的六位創辦人，把投資視野、技術深度、品牌經驗與資本思維匯入 Infinity Agentic。",
+    "profile_link": "查看完整介紹"
   },
   "footer": {
     "sitemap": "網站地圖",
