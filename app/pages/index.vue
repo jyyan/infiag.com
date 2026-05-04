@@ -64,7 +64,7 @@ const flywheel = computed(() => [
       :title="t('home.lumi.hero.title')"
       :desc="t('home.lumi.hero.desc')"
       :primary-cta-label="t('cta.try_lumi')"
-      primary-cta-href="https://lumi.infiag.com/index.html"
+      primary-cta-href="https://lumi.infiag.com/"
       :secondary-cta-label="t('cta.learn_roadmap')"
       :secondary-cta-to="localePath('/') + '#roadmap'"
     />
