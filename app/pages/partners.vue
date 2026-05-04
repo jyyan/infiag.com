@@ -34,7 +34,19 @@ useSchemaOrg([
 
 <template>
   <div v-if="data">
-    <SectionContainer :title="data.title" :subtitle="data.description" variant="tech" />
+    <section class="relative overflow-hidden bg-bg-deep -mt-20 pt-20">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/img/banner/partner.png">
+        <img
+          src="/img/banner/partner_m.png"
+          :alt="data.title"
+          class="block w-full h-auto select-none"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </picture>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-bg-base" />
+    </section>
     <SectionContainer v-if="data.features?.length">
       <div class="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
         <FeatureCard v-for="f in data.features" :key="f.title" :icon="f.icon" :title="f.title" :description="f.desc" />

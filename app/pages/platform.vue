@@ -57,11 +57,19 @@ useSchemaOrg([
 
 <template>
   <div>
-    <SectionContainer
-      :title="titleMap[locale] ?? titleMap['zh-TW']"
-      :subtitle="subtitleMap[locale] ?? subtitleMap['zh-TW']"
-      variant="tech"
-    />
+    <section class="relative overflow-hidden bg-bg-deep -mt-20 pt-20">
+      <picture>
+        <source media="(min-width: 768px)" srcset="/img/banner/platform.png">
+        <img
+          src="/img/banner/platform_m.png"
+          :alt="titleMap[locale] ?? titleMap['zh-TW']"
+          class="block w-full h-auto select-none"
+          loading="eager"
+          fetchpriority="high"
+        >
+      </picture>
+      <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-bg-base" />
+    </section>
     <SectionContainer>
       <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
         <FeatureCard
