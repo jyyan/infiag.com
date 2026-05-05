@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Infinity Agentic 無限智能",
-    "tagline": "打造 AI/VR 開放生態合作平台",
+    "tagline": "打造 AI/XR 開放生態合作平台",
     "company": "無限智能股份有限公司"
   },
   "nav": {
@@ -32,7 +32,7 @@
   },
   "home": {
     "founders_title": "核心創辦人",
-    "founders_subtitle": "六位來自投資、技術、財務、品牌、酒業、美業的跨域創辦人，攜手打造 AI/VR 開放平台",
+    "founders_subtitle": "六位來自投資、技術、財務、品牌、酒業、美業的跨域創辦人，攜手打造 AI/XR 開放平台",
     "founders_cta": "認識完整團隊",
     "lumi": {
       "seo": {
@@ -152,7 +152,7 @@
     },
     "platform": {
       "name": "Infinity Agentic 開放平台",
-      "description": "跨品牌相容的 AI/VR 軟硬體標準與 SDK，讓單一程式碼運行於所有相容裝置。"
+      "description": "跨品牌相容的 AI/XR 軟硬體標準與 SDK，讓單一程式碼運行於所有相容裝置。"
     },
     "partners": {
       "name": "Infinity Agentic 合作夥伴計畫",
@@ -160,11 +160,11 @@
     },
     "solutions": {
       "golf": {
-        "name": "AI/VR 高爾夫模擬解決方案",
+        "name": "AI/XR 高爾夫模擬解決方案",
         "description": "AI 揮桿分析與沉浸式 VR 練習場，專為高消費力玩家打造。"
       },
       "ski": {
-        "name": "AI/VR 滑雪訓練解決方案",
+        "name": "AI/XR 滑雪訓練解決方案",
         "description": "雪季前虛擬訓練、雪道上 AR 教練輔助。"
       },
       "vision": {

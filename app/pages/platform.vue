@@ -8,9 +8,9 @@ const titleMap = {
   'en':    'Open Platform & Standards',
 }
 const subtitleMap = {
-  'zh-TW': '開源 LMM 大運動模型 + VR/AI 專利授權',
-  'zh-CN': '开源 LMM 大运动模型 + VR/AI 专利授权',
-  'en':    'Open-source LMM (Large Motion Model) + VR/AI patent licensing',
+  'zh-TW': '開源 LMM 大運動模型 + XR/AI 專利授權',
+  'zh-CN': '开源 LMM 大运动模型 + XR/AI 专利授权',
+  'en':    'Open-source LMM (Large Motion Model) + XR/AI patent licensing',
 }
 
 const features = computed(() => locale.value === 'en' ? [
@@ -47,7 +47,7 @@ useSchemaOrg([
     '@id': 'https://infiag.com/platform#service',
     name: () => t('schema.platform.name'),
     description: () => t('schema.platform.description'),
-    serviceType: 'AI/VR Open Platform',
+    serviceType: 'AI/XR Open Platform',
     areaServed: ['TW', 'CN', 'Global'],
     provider: { '@id': 'https://infiag.com/#organization' },
     audience: { '@type': 'Audience', audienceType: 'Business' },

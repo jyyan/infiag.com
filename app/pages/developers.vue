@@ -49,7 +49,7 @@ const benefitsByLocale = {
     { icon: 'megaphone',  title: '联合营销',        desc: '上线活动联合推广' },
   ],
   'en': [
-    { icon: 'code',       title: 'Single Codebase', desc: 'Same code runs across all compatible AI/VR glasses' },
+    { icon: 'code',       title: 'Single Codebase', desc: 'Same code runs across all compatible AI/XR glasses' },
     { icon: 'package',    title: 'Free SDK',        desc: 'Open SDK + comprehensive samples and tutorials' },
     { icon: 'wallet',     title: 'Low Royalty',     desc: 'Reduced or waived initial royalties to lower your risk' },
     { icon: 'users',      title: 'Big User Base',   desc: 'Tap into our growing niche audiences (golf, ski, vision)' },

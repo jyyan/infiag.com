@@ -16,7 +16,7 @@ features:
 
 ## Why Us
 
-Golf demands technical precision and mental stability. Traditional training requires expensive coach time and range fees. Infinity Agentic's AI/VR integration brings professional-grade feedback to your home.
+Golf demands technical precision and mental stability. Traditional training requires expensive coach time and range fees. Infinity Agentic's AI/XR integration brings professional-grade feedback to your home.
 
 ## Technical Highlights
 

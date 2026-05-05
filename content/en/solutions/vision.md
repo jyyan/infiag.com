@@ -1,6 +1,6 @@
 ---
 title: Children Myopia Control
-description: Clinically-grounded AI/VR vision training
+description: Clinically-grounded AI/XR vision training
 hero_image: /images/vision-hero.jpg
 features:
   - icon: eye
@@ -16,7 +16,7 @@ features:
 
 ## Why Us
 
-Children's myopia is a global public health concern. Traditional methods (ortho-K, atropine) require long-term commitment and professional monitoring. Our solution combines AI/VR with at-home parent involvement and remote optometrist supervision.
+Children's myopia is a global public health concern. Traditional methods (ortho-K, atropine) require long-term commitment and professional monitoring. Our solution combines AI/XR with at-home parent involvement and remote optometrist supervision.
 
 ## Partners
 

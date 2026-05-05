@@ -1,7 +1,7 @@
 {
   "site": {
     "name": "Infinity Agentic",
-    "tagline": "Open Platform for AI/VR Strategic Alliances",
+    "tagline": "Open Platform for AI/XR Strategic Alliances",
     "company": "Infinity Agentic Inc."
   },
   "nav": {
@@ -32,7 +32,7 @@
   },
   "home": {
     "founders_title": "Meet the Founders",
-    "founders_subtitle": "Six co-founders from investment, technology, finance, brand, wine and beauty — building the AI/VR open platform together",
+    "founders_subtitle": "Six co-founders from investment, technology, finance, brand, wine and beauty — building the AI/XR open platform together",
     "founders_cta": "Meet the Full Team",
     "lumi": {
       "seo": {
@@ -152,7 +152,7 @@
     },
     "platform": {
       "name": "Infinity Agentic Open Platform",
-      "description": "Cross-brand AI/VR hardware-software standards and SDK — write once, run on any compliant device."
+      "description": "Cross-brand AI/XR hardware-software standards and SDK — write once, run on any compliant device."
     },
     "partners": {
       "name": "Infinity Agentic Partner Program",
@@ -160,11 +160,11 @@
     },
     "solutions": {
       "golf": {
-        "name": "AI/VR Golf Simulation Solution",
+        "name": "AI/XR Golf Simulation Solution",
         "description": "AI swing analysis and immersive VR practice for serious players."
       },
       "ski": {
-        "name": "AI/VR Ski Training Solution",
+        "name": "AI/XR Ski Training Solution",
         "description": "Pre-season virtual training and on-slope AR coaching for skiers."
       },
       "vision": {

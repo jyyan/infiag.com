@@ -1,6 +1,6 @@
 ---
 title: Investors
-description: Long-term value investment in the open AI/VR ecosystem
+description: Long-term value investment in the open AI/XR ecosystem
 features:
   - icon: globe
     title: Global Market Opportunity
@@ -16,7 +16,7 @@ features:
 ## Investment Highlights
 
 ### 1. Solving Real Pain Points
-The AI/VR market suffers from spec fragmentation and software lock-in. Our open platform creates win-win for hardware makers, software developers, and consumers.
+The AI/XR market suffers from spec fragmentation and software lock-in. Our open platform creates win-win for hardware makers, software developers, and consumers.
 
 ### 2. Dual Business Model
 - **B2B Platform Fees** — licensing revenue from hardware adopters
