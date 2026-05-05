@@ -25,10 +25,13 @@ const legal = computed(() => [
       <div class="grid grid-cols-1 md:grid-cols-4 gap-12">
         <!-- Brand -->
         <div class="space-y-4">
-          <div class="flex items-center gap-2">
-            <span class="text-3xl font-display text-glow">∞</span>
-            <span class="font-display font-bold">{{ t('site.name') }}</span>
-          </div>
+          <img
+            src="/logo.png"
+            :alt="t('site.name')"
+            width="160"
+            height="160"
+            class="h-28 w-auto -ml-2"
+          />
           <p class="text-fg-secondary text-sm leading-relaxed">{{ t('site.tagline') }}</p>
         </div>
 

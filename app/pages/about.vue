@@ -48,6 +48,25 @@ useSchemaOrg([
 
 <template>
   <div>
+    <section class="relative pt-28 pb-8 lg:pt-36 lg:pb-12 grid-tech overflow-hidden">
+      <div class="container-tight flex justify-center">
+        <div
+          v-motion
+          :initial="{ opacity: 0, scale: 0.85 }"
+          :enter="{ opacity: 1, scale: 1, transition: { duration: 1000 } }"
+          class="relative"
+        >
+          <div class="absolute inset-0 -m-12 rounded-full blur-3xl bg-accent-glow/30 animate-pulse-glow" />
+          <img
+            src="/logo.png"
+            alt="Infinity Agentic 無限智能"
+            width="480"
+            height="480"
+            class="relative w-72 md:w-96 lg:w-[28rem] h-auto"
+          />
+        </div>
+      </div>
+    </section>
     <SectionContainer :title="titleByLocale" :subtitle="introByLocale" variant="tech" />
     <SectionContainer
       :title="locale === 'en' ? 'SOAR Strategic Framework' : 'SOAR 策略框架'"

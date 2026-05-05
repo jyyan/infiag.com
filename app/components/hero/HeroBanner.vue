@@ -118,7 +118,13 @@ defineProps<{
           <div
             class="absolute inset-0 -m-8 rounded-full blur-2xl bg-accent-glow/30 animate-pulse-glow"
           />
-          <InfinityLogoSVG :size="140" class="relative" />
+          <img
+            src="/logo.png"
+            alt="Infinity Agentic 無限智能"
+            width="240"
+            height="240"
+            class="relative w-48 md:w-60 h-auto"
+          />
         </div>
       </div>
       <h1

@@ -16,11 +16,14 @@ const scrolled = computed(() => y.value > 80)
       : 'bg-transparent py-4'"
   >
     <div class="container-tight flex items-center justify-between gap-4">
-      <NuxtLink :to="localePath('/')" class="flex items-center gap-3 group">
-        <span class="text-2xl font-display text-glow group-hover:text-accent-bright transition-colors">∞</span>
-        <span class="font-display font-bold text-lg hidden sm:inline">
-          {{ t('site.name') }}
-        </span>
+      <NuxtLink :to="localePath('/')" class="flex items-center group">
+        <img
+          src="/logo-header.png"
+          :alt="t('site.name')"
+          width="768"
+          height="187"
+          class="h-9 sm:h-10 w-auto transition-opacity group-hover:opacity-90"
+        />
       </NuxtLink>
 
       <NavMenu />
