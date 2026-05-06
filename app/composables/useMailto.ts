@@ -6,8 +6,8 @@ export interface MailtoOptions {
   bcc?: string
 }
 
-const CONTACT_EMAIL = 'jeff@infiag.com'
-const SUPPORT_EMAIL = 'luke@infiag.com'
+const CONTACT_EMAIL = 'luke@infiag.com'
+const SUPPORT_EMAIL = 'jeff@infiag.com'
 
 export function useMailto() {
   function buildMailto(options: MailtoOptions = {}): string {

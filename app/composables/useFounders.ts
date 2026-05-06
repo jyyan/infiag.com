@@ -18,52 +18,12 @@ export interface Founder {
 
 const FOUNDERS_RAW: Founder[] = [
   {
-    id: 'jeff',
-    photo: '/img/jeff/jeff.jpg',
-    english: 'Jeff',
-    chinese: { 'zh-TW': '陳則夫', 'zh-CN': '陈则夫', en: 'Chen Tserfu' },
-    role: 'CEO',
-    title: {
-      'zh-TW': '共同創辦人 · 投資與資源策略',
-      'zh-CN': '联合创始人 · 投资与资源策略',
-      en: 'Co-founder · Investment & Resources',
-    },
-    slogan: {
-      'zh-TW': '以不動產為根基，以娛樂為視野，以慈善為靈魂。',
-      'zh-CN': '以不动产为根基，以娱乐为视野，以慈善为灵魂。',
-      en: 'Real estate as foundation, entertainment as vision, philanthropy as soul.',
-    },
-    highlights: {
-      'zh-TW': [
-        '跨六大市場的連續投資人；東京、白馬滑雪場不動產組合。',
-        '投資好萊塢 A 級製作與台灣 IP 孵化（《咒》、《民雄鬼屋》）。',
-        'VFX 公司投資人（《阿凡達 2》、《權力遊戲》視效合作）。',
-      ],
-      'zh-CN': [
-        '跨六大市场的连续投资人；东京、白马滑雪场不动产组合。',
-        '投资好莱坞 A 级制作与台湾 IP 孵化（《咒》、《民雄鬼屋》）。',
-        'VFX 公司投资人（《阿凡达 2》、《权力的游戏》视效合作）。',
-      ],
-      en: [
-        'Serial investor across six markets — Tokyo & Hakuba real-estate portfolio.',
-        'Backs Hollywood A-list productions and Taiwan IP incubation.',
-        'VFX investor with credits across Avatar 2 and Game of Thrones.',
-      ],
-    },
-    specialties: {
-      'zh-TW': ['不動產投資', '影視娛樂', '視覺特效', '跨國資源整合', '慈善公益'],
-      'zh-CN': ['不动产投资', '影视娱乐', '视觉特效', '跨国资源整合', '慈善公益'],
-      en: ['Real Estate', 'Film & Entertainment', 'VFX', 'Cross-border Resources', 'Philanthropy'],
-    },
-    link: 'https://chen-tserfu.netlify.app/',
-  },
-  {
     id: 'luke',
     photo: '/img/luke/luke.jpg',
     photoPosition: 'left center',
     english: 'Luke',
     chinese: { 'zh-TW': '顏浚原', 'zh-CN': '颜浚原', en: 'Yan Junyuan' },
-    role: 'COO',
+    role: 'CEO',
     title: {
       'zh-TW': '共同創辦人 · 營運與技術',
       'zh-CN': '联合创始人 · 运营与技术',
@@ -97,6 +57,46 @@ const FOUNDERS_RAW: Founder[] = [
       en: ['Full-stack', 'Custom ERP / MRP', 'AI Integration', 'Cloud-native', 'Open Source'],
     },
     link: 'https://bse91.jyyan.info/luke.html',
+  },
+  {
+    id: 'jeff',
+    photo: '/img/jeff/jeff.jpg',
+    english: 'Jeff',
+    chinese: { 'zh-TW': '陳則夫', 'zh-CN': '陈则夫', en: 'Chen Tserfu' },
+    role: 'COO',
+    title: {
+      'zh-TW': '共同創辦人 · 投資與資源策略',
+      'zh-CN': '联合创始人 · 投资与资源策略',
+      en: 'Co-founder · Investment & Resources',
+    },
+    slogan: {
+      'zh-TW': '以不動產為根基，以娛樂為視野，以慈善為靈魂。',
+      'zh-CN': '以不动产为根基，以娱乐为视野，以慈善为灵魂。',
+      en: 'Real estate as foundation, entertainment as vision, philanthropy as soul.',
+    },
+    highlights: {
+      'zh-TW': [
+        '跨六大市場的連續投資人；東京、白馬滑雪場不動產組合。',
+        '投資好萊塢 A 級製作與台灣 IP 孵化（《咒》、《民雄鬼屋》）。',
+        'VFX 公司投資人（《阿凡達 2》、《權力遊戲》視效合作）。',
+      ],
+      'zh-CN': [
+        '跨六大市场的连续投资人；东京、白马滑雪场不动产组合。',
+        '投资好莱坞 A 级制作与台湾 IP 孵化（《咒》、《民雄鬼屋》）。',
+        'VFX 公司投资人（《阿凡达 2》、《权力的游戏》视效合作）。',
+      ],
+      en: [
+        'Serial investor across six markets — Tokyo & Hakuba real-estate portfolio.',
+        'Backs Hollywood A-list productions and Taiwan IP incubation.',
+        'VFX investor with credits across Avatar 2 and Game of Thrones.',
+      ],
+    },
+    specialties: {
+      'zh-TW': ['不動產投資', '影視娛樂', '視覺特效', '跨國資源整合', '慈善公益'],
+      'zh-CN': ['不动产投资', '影视娱乐', '视觉特效', '跨国资源整合', '慈善公益'],
+      en: ['Real Estate', 'Film & Entertainment', 'VFX', 'Cross-border Resources', 'Philanthropy'],
+    },
+    link: 'https://chen-tserfu.netlify.app/',
   },
   {
     id: 'min',
@@ -224,7 +224,7 @@ const FOUNDERS_RAW: Founder[] = [
     photoPosition: 'center 50%',
     english: 'Elvis',
     chinese: { 'zh-TW': '李林軒', 'zh-CN': '李林轩', en: 'Lee Linxuan' },
-    role: 'HDR',
+    role: 'HRD',
     title: {
       'zh-TW': '共同創辦人 · 人才與業務發展',
       'zh-CN': '联合创始人 · 人才与业务发展',

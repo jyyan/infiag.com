@@ -1,13 +1,13 @@
 # Founders
-- CEO: JEFF 陳則夫
-  - https://chen-tserfu.netlify.app/
-- COO: LUKE 顏浚原
+- CEO: LUKE 顏浚原
   - https://bse91.jyyan.info/luke.html
+- COO: JEFF 陳則夫
+  - https://chen-tserfu.netlify.app/
 - CFO: MIN 孫敏
   - https://bse91.jyyan.info/min.html
 - MD: YANG 楊智先
   - https://bse91.jyyan.info/yangzhixian.html
 - SD: MICHELE 江小玲
   - https://bse91.jyyan.info/michele.html
-- HDR: ELVIS 李林軒
+- HRD: ELVIS 李林軒
   - https://bse91.jyyan.info/elvis.html

@@ -47,14 +47,14 @@ export function useSiteSchema() {
       {
         '@type': 'ContactPoint',
         contactType: 'customer service',
-        email: 'jeff@infiag.com',
+        email: 'luke@infiag.com',
         availableLanguage: ['zh-Hant', 'zh-Hans', 'en'],
         areaServed: ['TW', 'CN', 'MY', 'Global'],
       },
       {
         '@type': 'ContactPoint',
         contactType: 'investor relations',
-        email: 'jeff@infiag.com',
+        email: 'luke@infiag.com',
         availableLanguage: ['zh-Hant', 'zh-Hans', 'en'],
       },
     ],
