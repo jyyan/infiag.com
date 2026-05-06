@@ -1,7 +1,7 @@
 # LUMI 文案 TA 收斂：銀髮族 + 孝順子女
 
 **日期**：2026-05-06
-**狀態**：Draft（待 user review）
+**狀態**：Implemented（2026-05-06）
 **作者**：Luke + Claude（brainstorming session）
 **參考素材**：`ref/BM_0504_1715/pitch-angel.html`（Angel Pitch 10 min 情感版）
 
@@ -391,3 +391,4 @@ defineProps<{
   - LUMI 子頁（`/lumi`）獨立深度頁——可放更技術細節（讀螢幕 / 圈位置 / 陪到底）給開發者與企業評估
   - 視覺素材替換（銀髮族母女合照、家庭場景圖）
   - 投資人頁（`/investors`）的 LUMI 段落同步收斂
+- **實作時新增的設定（2026-05-06）**：因為 i18n 訊息中含有 `<b>` 標籤，`unplugin-vue-i18n` 預設的 `strictMessage` 會直接拒絕載入 locale。實作時加了兩處設定：`nuxt.config.ts` 的 `i18n.compilation.strictMessage: false`、新增 `i18n.config.ts` 設 `warnHtmlMessage: false`。**處理**：這是必要的工程設定，已 commit；若未來要新增帶 HTML 的 i18n 訊息，沿用此模式即可。
