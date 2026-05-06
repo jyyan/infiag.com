@@ -29,6 +29,13 @@ const painPoints = computed(() => [
   { stat: t('home.lumi.pain.i4_stat'), label: t('home.lumi.pain.i4_label'), desc: t('home.lumi.pain.i4_desc'), icon: 'headphones' },
 ])
 
+const painScenarios = computed(() =>
+  (['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8'] as const).map((k) => ({
+    quote: t(`home.lumi.pain.scenarios.${k}.quote`),
+    cause: t(`home.lumi.pain.scenarios.${k}.cause`),
+  })),
+)
+
 const steps = computed(() => [
   { step: '01', title: t('home.lumi.steps.s1_title'), desc: t('home.lumi.steps.s1_desc'), icon: 'eye' },
   { step: '02', title: t('home.lumi.steps.s2_title'), desc: t('home.lumi.steps.s2_desc'), icon: 'message-circle' },
@@ -84,6 +91,12 @@ const flywheel = computed(() => [
       :title="t('home.lumi.pain.title')"
       :subtitle="t('home.lumi.pain.subtitle')"
       :items="painPoints"
+    />
+
+    <!-- 3.5. Pain scenarios — 8 daily-tech moments parents have asked -->
+    <PainPointScenarios
+      :scenarios="painScenarios"
+      :closing="t('home.lumi.pain.closing')"
     />
 
     <!-- 4. Three steps demo -->

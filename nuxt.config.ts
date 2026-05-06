@@ -71,6 +71,10 @@ export default defineNuxtConfig({
     defaultLocale: 'zh-TW',
     strategy: 'prefix',
     langDir: 'locales',
+    vueI18n: './i18n.config.ts',
+    compilation: {
+      strictMessage: false,
+    },
     locales: [
       { code: 'zh-TW', language: 'zh-TW', name: '繁體中文', file: 'zh-TW.json', dir: 'ltr' },
       { code: 'zh-CN', language: 'zh-CN', name: '简体中文', file: 'zh-CN.json', dir: 'ltr' },
