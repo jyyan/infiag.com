@@ -36,87 +36,98 @@
     "founders_cta": "Meet the Full Team",
     "lumi": {
       "seo": {
-        "title": "LUMI — The light beside you, with hands.",
-        "description": "LUMI is the first AI companion that doesn't just answer — it walks the last mile with you. Lumi (Latin: lux, light) by Infinity Agentic."
+        "title": "LUMI · The AI companion built for parents",
+        "description": "LUMI walks parents through every screen step — so adult children don’t have to take that call. Lumi (Latin: lux, light), by Infinity Agentic."
       },
       "hero": {
         "tagline": "Meet LUMI",
-        "title": "The light beside you—now with hands.",
-        "desc": "Lumi (Latin: lux, light)—the first AI companion that doesn't just answer, but walks the last mile with you."
+        "title": "I built her for my mom.",
+        "desc": "LUMI is going to walk 800 million mothers through every step."
       },
       "stuck": {
         "label": "Why LUMI",
-        "title": "The third kind of stuck.",
-        "quote": "“I already have the answer. I still don't know how to do it.”",
-        "body_p1": "Your mom calls about a new app. She isn't slow, and she isn't unwilling — she's stuck on the invisible wall between knowing and doing.",
-        "body_p2": "AI gave her the answer. Nobody walked her through.",
-        "tagline": "LUMI is the first AI built for the last mile — the part where you actually have to do the thing."
+        "title": "She isn’t unable to use it. She’s afraid to ask.",
+        "quote": "“That night I realized — my mom hasn’t asked me a question in a long, long time.”",
+        "body_p1": "After being brushed off, cut off, or yelled at a few times, parents stop asking. “What does long-press mean?” “Where’s the verification code?” “How do I do a group chain message?” — they aren’t slow. They just don’t want to feel like a burden anymore.",
+        "body_p2": "AI can give them the answer. It can’t give them the hand that walks them through.",
+        "tagline": "LUMI sits on their screen — gently pointing to every next step, until the thing actually gets done."
       },
       "pain": {
-        "title": "How big is this gap?",
-        "subtitle": "More people are stuck after the answer than you think.",
-        "i1_stat": "82%",
-        "i1_label": "of AI users still stuck",
-        "i1_desc": "They got the answer. They still don't know step one.",
-        "i2_stat": "350M+",
-        "i2_label": "digital newcomers worldwide",
-        "i2_desc": "Curious about technology, afraid to ask, afraid to try.",
-        "i3_stat": "1B+",
-        "i3_label": "everyday DIY scenarios",
-        "i3_desc": "From a leaky faucet to a router setup — every task is a relearn.",
-        "i4_stat": "70%",
-        "i4_label": "of customer-service issues need a human",
-        "i4_desc": "AI can answer. It can't walk the customer through the doing."
+        "title": "This isn’t isolated — it’s happening every day, all over the world.",
+        "subtitle": "Your parents have probably asked you...",
+        "i1_stat": "3-5",
+        "i1_label": "per-day, per-elder",
+        "i1_desc": "tech operation problems they hit.",
+        "i2_stat": "1.4B",
+        "i2_label": "global 60+ population by 2030",
+        "i2_desc": "Aging is the irreversible mega-trend.",
+        "i3_stat": "+250K",
+        "i3_label": "new elders every day",
+        "i3_desc": "The market grows while you sleep.",
+        "i4_stat": "USD $240",
+        "i4_label": "yearly willingness-to-pay",
+        "i4_desc": "Adult children, paying to solve their parents’ tech problems.",
+        "scenarios": {
+          "s1": { "quote": "“Why is my phone <b>silent</b>?”", "cause": "Do-not-disturb left on" },
+          "s2": { "quote": "“I <b>forgot the password</b> again.”", "cause": "3× resets / month avg." },
+          "s3": { "quote": "“The group wants a <b>chain message</b> — how?”", "cause": "Copy format + add your name" },
+          "s4": { "quote": "“Where’s the <b>SMS verification code</b>?”", "cause": "#1 sign-in blocker" },
+          "s5": { "quote": "“Why won’t <b>Wi-Fi</b> connect?”", "cause": "Reconnect steps forgotten" },
+          "s6": { "quote": "“I can’t <b>book the doctor’s slot</b>.”", "cause": "UI is too complex" },
+          "s7": { "quote": "“He’s calling me on <b>video</b> — how do I answer?”", "cause": "FaceTime / LINE video" },
+          "s8": { "quote": "“How do I <b>download an app</b>?”", "cause": "App Store flow" }
+        },
+        "closing": "Not “AI for everyone” — but elders + adult children paying for them is the most underestimated market of this decade."
       },
       "steps": {
-        "title": "How LUMI walks with you",
+        "title": "How LUMI walks parents through",
         "subtitle": "Three steps that turn AI from an answer-machine into a companion.",
-        "s1_title": "It sees what you're doing",
-        "s1_desc": "LUMI sees your screen and reads the moment. You don't have to explain.",
-        "s2_title": "It walks at your pace",
-        "s2_desc": "Not a wall of text — step-by-step, gentle prompts, real confirmation.",
-        "s3_title": "It stays till the end",
-        "s3_desc": "From step one to done, you're not alone for a single click."
+        "s1_title": "It sees what’s on Mom’s screen",
+        "s1_desc": "They don’t have to explain. LUMI reads the moment — runs on-device, no privacy leak.",
+        "s2_title": "Purple light circles “tap here”",
+        "s2_desc": "No more “long-press” or “swipe down” — words parents don’t know. LUMI just shows where to tap.",
+        "s3_title": "Stays till the thing is actually done",
+        "s3_desc": "Not a one-shot answer. A walk-through, step by step — and next time, they’ll do it themselves."
       },
       "roadmap": {
-        "title": "Where we're going",
+        "title": "Where we’re going",
         "subtitle": "LUMI is the start, not the end.",
         "c_label": "Consumer track",
-        "c_caption": "From screen, into space, into immersion.",
+        "c_caption": "From the phone screen, into the living room, into health care",
         "b_label": "Business track",
         "b_caption": "Open for conversation now.",
         "v1_year": "2026",
         "v1_tagline": "On-screen companion",
-        "v1_desc": "Shipping this year. The first product — closing the last mile on screen.",
+        "v1_desc": "Shipping this year. LUMI on Mom’s phone — every app step, with company.",
         "v2_year": "2027",
-        "v2_tagline": "AR — into your space",
-        "v2_desc": "From the screen into the space around you.",
+        "v2_tagline": "AR — into the home",
+        "v2_desc": "From the screen into the living room — glasses or a smart display, right there with them.",
         "v3_year": "2028",
-        "v3_tagline": "VR — fully immersive",
-        "v3_desc": "From watching to fully immersive learning and training.",
+        "v3_tagline": "Immersive care",
+        "v3_desc": "Medication reminders, fall alerts, cognitive-health training — not just companion, but guardian.",
         "v4_name": "LUMI for Business",
         "v4_year": "Open for conversation",
-        "v4_tagline": "Enterprise modules",
-        "v4_desc": "License the LUMI engine — for support, training, and brand IP.",
+        "v4_tagline": "Eldercare, insurance, government",
+        "v4_desc": "License the LUMI engine to eldercare, insurers, AARP, and digital-equity programs.",
         "b_cta": "Talk to us about business"
       },
       "flywheel": {
         "title": "Why this keeps compounding",
-        "subtitle": "Two revenue lines × a behavior-data flywheel — the more we walk with people, the smarter we get.",
-        "i1_title": "Subscriptions",
-        "i1_desc": "Personal and family plans. Companionship beats one-shot tools on retention.",
-        "i2_title": "Human-behavior model",
-        "i2_desc": "Every walked-through task builds a first-of-its-kind dataset of how humans actually do things.",
-        "i3_title": "IP & brand extension",
-        "i3_desc": "Lumi the character — from pixels to plush, animation, and partnerships."
+        "subtitle": "A three-part flywheel — children pay, parents use, health care extends. Each loop accelerates the next.",
+        "i1_title": "Subscription stickiness",
+        "i1_desc": "Children pay × parents use — < 8% annual churn, far above tool-type AI.",
+        "i2_title": "60+ behavior model",
+        "i2_desc": "Every walked-through task builds the world’s first dataset of how seniors actually use technology.",
+        "i3_title": "Health-care extension",
+        "i3_desc": "Falls, medication, early dementia signals — natural entry point for eldercare and insurance B2B."
       },
       "for_business": {
-        "title": "We're open for business too",
-        "subtitle": "If your customers, employees, or students get stuck on the last mile, the LUMI engine is licensable. Platform, partner program, and SDK are still here."
+        "title": "We’re open to eldercare, insurance, and government too",
+        "subtitle": "Preinstall licenses, health-guardian modules, SDK — AARP, insurers, eldercare facilities, digital-equity programs. There’s a place for LUMI in your stack."
       },
       "closing": {
-        "title": "Do you believe in light?",
-        "subtitle": "LUMI is shipping soon. We pick our early users carefully."
+        "title": "I started this — for my mom.",
+        "subtitle": "Walk with us — to every elder’s hand, across Asia-Pacific."
       }
     }
   },
@@ -138,16 +149,20 @@
   },
   "schema": {
     "org": {
-      "description": "Infinity Agentic builds LUMI — the first AI companion that walks the last mile with you — and licenses the LUMI engine to enterprises.",
+      "description": "LUMI by Infinity Agentic — an AI companion built for elders and the adult children who pay for them; health-guardian module and SDK open to eldercare, insurance, and government partners.",
       "knowsAbout": [
-        "AI Companion",
-        "Artificial Intelligence",
-        "Human Behavior Model",
-        "On-Screen AI Companion",
-        "AR / VR Applications",
-        "Enterprise AI Modules",
-        "B2B AI Licensing",
-        "Brand IP"
+        "AI companion",
+        "Artificial intelligence",
+        "Human behavior model",
+        "On-screen AI companion",
+        "Elder companion AI",
+        "Senior digital companionship",
+        "Family-paid AI",
+        "Eldercare technology",
+        "Health guardian",
+        "AR / VR applications",
+        "Enterprise AI modules",
+        "B2B AI licensing"
       ]
     },
     "platform": {
