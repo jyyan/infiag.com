@@ -67,10 +67,10 @@ const bTrack = computed(() => ({
   desc: t('home.lumi.roadmap.v4_desc'),
 }))
 
-const flywheel = computed(() => [
-  { icon: 'users',    title: t('home.lumi.flywheel.i1_title'), desc: t('home.lumi.flywheel.i1_desc') },
-  { icon: 'database', title: t('home.lumi.flywheel.i2_title'), desc: t('home.lumi.flywheel.i2_desc') },
-  { icon: 'sparkles', title: t('home.lumi.flywheel.i3_title'), desc: t('home.lumi.flywheel.i3_desc') },
+const revenueStreams = computed(() => [
+  { share: t('home.lumi.flywheel.i1.share'), title: t('home.lumi.flywheel.i1.title'), desc: t('home.lumi.flywheel.i1.desc'), detail: t('home.lumi.flywheel.i1.detail'), icon: t('home.lumi.flywheel.i1.icon') },
+  { share: t('home.lumi.flywheel.i2.share'), title: t('home.lumi.flywheel.i2.title'), desc: t('home.lumi.flywheel.i2.desc'), detail: t('home.lumi.flywheel.i2.detail'), icon: t('home.lumi.flywheel.i2.icon') },
+  { share: t('home.lumi.flywheel.i3.share'), title: t('home.lumi.flywheel.i3.title'), desc: t('home.lumi.flywheel.i3.desc'), detail: t('home.lumi.flywheel.i3.detail'), icon: t('home.lumi.flywheel.i3.icon') },
 ])
 </script>
 
@@ -158,11 +158,16 @@ const flywheel = computed(() => [
       />
     </div>
 
-    <!-- 6. Business flywheel -->
+    <!-- 6. Revenue flywheel: 3 streams × 3 flywheels -->
     <BusinessFlywheel
       :title="t('home.lumi.flywheel.title')"
       :subtitle="t('home.lumi.flywheel.subtitle')"
-      :items="flywheel"
+      :streams="revenueStreams"
+      :arr-label="t('home.lumi.flywheel.arr_label')"
+      :arr-value="t('home.lumi.flywheel.arr_value')"
+      :gross-margin-label="t('home.lumi.flywheel.gross_margin_label')"
+      :gross-margin-value="t('home.lumi.flywheel.gross_margin_value')"
+      :closing-note="t('home.lumi.flywheel.closing_note')"
     />
 
     <!-- 7. Founders (reuse) -->

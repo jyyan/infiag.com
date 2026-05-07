@@ -142,14 +142,34 @@
         "b_cta": "Talk to us about business"
       },
       "flywheel": {
-        "title": "Why this keeps compounding",
-        "subtitle": "A three-part flywheel — children pay, parents use, health care extends. Each loop accelerates the next.",
-        "i1_title": "Subscription stickiness",
-        "i1_desc": "Children pay × parents use — < 8% annual churn, far above tool-type AI.",
-        "i2_title": "60+ behavior model",
-        "i2_desc": "Every walked-through task builds the world’s first dataset of how seniors actually use technology.",
-        "i3_title": "Health-care extension",
-        "i3_desc": "Falls, medication, early dementia signals — natural entry point for eldercare and insurance B2B."
+        "title": "Why this business compounds",
+        "subtitle": "Three revenue streams, three flywheels — each accelerates the next.",
+        "i1": {
+          "share": "55%",
+          "title": "Subscription stickiness",
+          "desc": "Children pay × parents use — annual churn under 8%, far above tool-AI family retention.",
+          "detail": "USD $9.99/mo individual · USD $19.99/mo family (up to 4 elders)",
+          "icon": "users"
+        },
+        "i2": {
+          "share": "25%",
+          "title": "Behavior data engine",
+          "desc": "Every walk-through builds the world’s first 60+ senior behavior dataset.",
+          "detail": "Licensed to AI companies, insurers, eldercare, governments",
+          "icon": "database"
+        },
+        "i3": {
+          "share": "20%",
+          "title": "IP & merchandise",
+          "desc": "Lumi figurines, collabs, stickers, AR filters — from tool to brand, 90%+ margin.",
+          "detail": "Hello-Kitty playbook: brand licensing + merchandise",
+          "icon": "sparkles"
+        },
+        "arr_label": "2027 ARR · Annual recurring revenue",
+        "arr_value": "USD $20M",
+        "gross_margin_label": "Gross margin",
+        "gross_margin_value": "87%",
+        "closing_note": "Three streams that compound independently and reinforce each other."
       },
       "for_business": {
         "title": "We’re open to eldercare, insurance, and government too",
