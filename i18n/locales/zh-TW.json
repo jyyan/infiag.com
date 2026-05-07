@@ -196,6 +196,75 @@
       }
     }
   },
+  "investors": {
+    "mission": {
+      "eyebrow": "我們存在是為了",
+      "mission": "讓全天下沒有學不會 AI 的銀髮族",
+      "value_eyebrow": "核心價值",
+      "value": "長者為重"
+    },
+    "revenue": {
+      "title": "三條收益模型",
+      "subtitle": "USD $20M ARR · 2027 目標 · 毛利率 87%",
+      "r1": {
+        "share": "55%",
+        "title": "家庭訂閱",
+        "amount": "USD $11M",
+        "lines": [
+          "USD $9.99 / 月 · 個人方案",
+          "USD $19.99 / 月 · 家庭方案（可加 4 位長輩）",
+          "8 萬戶付費家庭"
+        ],
+        "icon": "users"
+      },
+      "r2": {
+        "share": "25%",
+        "title": "協助用戶的數據",
+        "amount": "USD $5M",
+        "lines": [
+          "匿名化銀髮族操作行為數據",
+          "授權給 AI 公司、保險、長照、政府",
+          "B2B 數據 API 授權"
+        ],
+        "icon": "database"
+      },
+      "r3": {
+        "share": "20%",
+        "title": "IP · Lumi 周邊",
+        "amount": "USD $4M",
+        "lines": [
+          "公仔 / 聯名 / 表情包 / AR 濾鏡",
+          "品牌授權（Hello Kitty 模式）",
+          "毛利 90%+"
+        ],
+        "icon": "sparkles"
+      },
+      "arr_label": "2027 ARR · 年度經常收入",
+      "arr_value": "USD $20M",
+      "gross_margin_label": "毛利率",
+      "gross_margin_value": "87%",
+      "closing_note": "三條收入彼此獨立又互相加成"
+    },
+    "exits": {
+      "title": "三條退場路徑（同時開啟）",
+      "subtitle": "三條退場彼此獨立，無一單一依賴。",
+      "e1": {
+        "code": "01",
+        "title": "被併購",
+        "desc": "Apple / Google / Amazon Alexa+ / 長照集團 / AARP"
+      },
+      "e2": {
+        "code": "02",
+        "title": "獨立上市",
+        "desc": "美股（Nasdaq）或港股 / 銀髮科技類股當紅賽道"
+      },
+      "e3": {
+        "code": "03",
+        "title": "戰略合併",
+        "desc": "與機器人公司（Figure / 1X）合併，進入 v4 沉浸關懷階段"
+      }
+    }
+  },
   "founders": {
     "section_title": "創辦團隊",
     "section_subtitle": "跨產業、跨市場的六位創辦人，把投資視野、技術深度、品牌經驗與資本思維匯入 Infinity Agentic。",

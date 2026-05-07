@@ -196,6 +196,75 @@
       }
     }
   },
+  "investors": {
+    "mission": {
+      "eyebrow": "我们存在是为了",
+      "mission": "让全天下没有学不会 AI 的银发族",
+      "value_eyebrow": "核心价值",
+      "value": "长者为重"
+    },
+    "revenue": {
+      "title": "三条收益模型",
+      "subtitle": "USD $20M ARR · 2027 目标 · 毛利率 87%",
+      "r1": {
+        "share": "55%",
+        "title": "家庭订阅",
+        "amount": "USD $11M",
+        "lines": [
+          "USD $9.99 / 月 · 个人方案",
+          "USD $19.99 / 月 · 家庭方案（可加 4 位长辈）",
+          "8 万户付费家庭"
+        ],
+        "icon": "users"
+      },
+      "r2": {
+        "share": "25%",
+        "title": "协助用户的数据",
+        "amount": "USD $5M",
+        "lines": [
+          "匿名化银发族操作行为数据",
+          "授权给 AI 公司、保险、长照、政府",
+          "B2B 数据 API 授权"
+        ],
+        "icon": "database"
+      },
+      "r3": {
+        "share": "20%",
+        "title": "IP · Lumi 周边",
+        "amount": "USD $4M",
+        "lines": [
+          "公仔 / 联名 / 表情包 / AR 滤镜",
+          "品牌授权（Hello Kitty 模式）",
+          "毛利 90%+"
+        ],
+        "icon": "sparkles"
+      },
+      "arr_label": "2027 ARR · 年度经常收入",
+      "arr_value": "USD $20M",
+      "gross_margin_label": "毛利率",
+      "gross_margin_value": "87%",
+      "closing_note": "三条收入彼此独立又互相加成"
+    },
+    "exits": {
+      "title": "三条退场路径（同时开启）",
+      "subtitle": "三条退场彼此独立，无一单一依赖。",
+      "e1": {
+        "code": "01",
+        "title": "被并购",
+        "desc": "Apple / Google / Amazon Alexa+ / 长照集团 / AARP"
+      },
+      "e2": {
+        "code": "02",
+        "title": "独立上市",
+        "desc": "美股（Nasdaq）或港股 / 银发科技类股当红赛道"
+      },
+      "e3": {
+        "code": "03",
+        "title": "战略合并",
+        "desc": "与机器人公司（Figure / 1X）合并，进入 v4 沉浸关怀阶段"
+      }
+    }
+  },
   "founders": {
     "section_title": "创办团队",
     "section_subtitle": "跨产业、跨市场的六位创办人，把投资视野、技术深度、品牌经验与资本思维汇入 Infinity Agentic。",

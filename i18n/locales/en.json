@@ -196,6 +196,75 @@
       }
     }
   },
+  "investors": {
+    "mission": {
+      "eyebrow": "WE EXIST TO ENSURE",
+      "mission": "No senior is left behind in the AI era",
+      "value_eyebrow": "CORE VALUE",
+      "value": "Elders First"
+    },
+    "revenue": {
+      "title": "Three revenue streams",
+      "subtitle": "USD $20M ARR · 2027 target · 87% gross margin",
+      "r1": {
+        "share": "55%",
+        "title": "Family subscriptions",
+        "amount": "USD $11M",
+        "lines": [
+          "USD $9.99 / mo · Individual plan",
+          "USD $19.99 / mo · Family plan (up to 4 elders)",
+          "80,000 paying households"
+        ],
+        "icon": "users"
+      },
+      "r2": {
+        "share": "25%",
+        "title": "Behavior data",
+        "amount": "USD $5M",
+        "lines": [
+          "Anonymized senior operation-behavior data",
+          "Licensed to AI companies, insurers, eldercare, governments",
+          "B2B data API licensing"
+        ],
+        "icon": "database"
+      },
+      "r3": {
+        "share": "20%",
+        "title": "IP · LUMI merchandise",
+        "amount": "USD $4M",
+        "lines": [
+          "Figurines · Collabs · Stickers · AR filters",
+          "Brand licensing (Hello Kitty playbook)",
+          "90%+ gross margin"
+        ],
+        "icon": "sparkles"
+      },
+      "arr_label": "2027 ARR · Annual recurring revenue",
+      "arr_value": "USD $20M",
+      "gross_margin_label": "Gross margin",
+      "gross_margin_value": "87%",
+      "closing_note": "Three streams that compound independently and reinforce each other."
+    },
+    "exits": {
+      "title": "Three exit paths (open simultaneously)",
+      "subtitle": "Three independent exits, none reliant on a single dependency.",
+      "e1": {
+        "code": "01",
+        "title": "Acquisition",
+        "desc": "Apple / Google / Amazon Alexa+ / Eldercare groups / AARP"
+      },
+      "e2": {
+        "code": "02",
+        "title": "Independent IPO",
+        "desc": "Nasdaq or HKEX / senior-tech sector momentum"
+      },
+      "e3": {
+        "code": "03",
+        "title": "Strategic merger",
+        "desc": "Merge with robotics companies (Figure / 1X) into v4 immersive care"
+      }
+    }
+  },
   "founders": {
     "section_title": "Founding Team",
     "section_subtitle": "Six founders across industries and markets bringing investment vision, technical depth, brand experience and capital thinking into Infinity Agentic.",
