@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 const { founders } = useFounders()
 
 const titleByLocale = computed(() => ({
@@ -28,6 +28,12 @@ const soar = computed(() => [
     desc: locale.value === 'en' ? 'Ecosystem expansion + niche penetration metrics'
                                  : '生態系擴張指標、利基市場滲透率' },
 ])
+
+const advisorQuotes = computed(() => {
+  const list = tm('home.lumi.advisor.quotes') as unknown[]
+  if (!Array.isArray(list)) return []
+  return list.map((q) => (typeof q === 'string' ? q : rt(q as never))) as string[]
+})
 
 usePageSeo({ title: titleByLocale.value, description: introByLocale.value })
 
@@ -67,6 +73,12 @@ useSchemaOrg([
         </div>
       </div>
     </section>
+    <MissionBar
+      :eyebrow-mission="t('home.lumi.mission.eyebrow_mission')"
+      :mission="t('home.lumi.mission.mission')"
+      :eyebrow-value="t('home.lumi.mission.eyebrow_value')"
+      :value="t('home.lumi.mission.value')"
+    />
     <SectionContainer :title="titleByLocale" :subtitle="introByLocale" variant="tech" />
     <SectionContainer
       :title="locale === 'en' ? 'SOAR Strategic Framework' : 'SOAR 策略框架'"
@@ -100,5 +112,19 @@ useSchemaOrg([
         />
       </div>
     </SectionContainer>
+
+    <AdvisorCard
+      variant="full"
+      :eyebrow="t('home.lumi.advisor.eyebrow')"
+      :name="t('home.lumi.advisor.name')"
+      :title="t('home.lumi.advisor.title')"
+      :role-extended="t('home.lumi.advisor.role_extended')"
+      :headline="t('home.lumi.advisor.headline')"
+      :quotes="advisorQuotes"
+      :expand-label="t('home.lumi.advisor.expand_label')"
+      :video-label="t('home.lumi.advisor.video_label')"
+      :full-speech="t('home.lumi.advisor.full_speech')"
+      video-href="https://91bse.org/"
+    />
   </div>
 </template>
