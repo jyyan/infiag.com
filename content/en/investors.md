@@ -1,35 +1,20 @@
 ---
-title: Investors
-description: Long-term value investment in the open AI/XR ecosystem
+title: Investor Center
+description: I built her for my mother — LUMI will walk through every step with 800 million parents around the world.
 features:
-  - icon: globe
-    title: Global Market Opportunity
-    desc: AI wearable boom × cross-brand compatibility necessity
-  - icon: trophy
-    title: Niche Market Moats
-    desc: Golf, ski, children vision — high spend, high stickiness
-  - icon: shield
-    title: Open Patent Shield
-    desc: Qualcomm-style industry standard establishment
+  - icon: heart-handshake
+    title: L1 — Senior Companion
+    desc: LUMI v1 on-screen companion, extending from phone to living room and health monitoring
+  - icon: database
+    title: L2 — Behavior Data Engine
+    desc: The first 60+ senior behavior dataset on the planet — an asset that compounds
+  - icon: building-2
+    title: L3 — Enterprise Modules
+    desc: Pre-installed licensing for eldercare, insurance, AARP, and government digital-equity programs
 ---
 
-## Investment Highlights
+## Investment Thesis Summary
 
-### 1. Solving Real Pain Points
-The AI/XR market suffers from spec fragmentation and software lock-in. Our open platform creates win-win for hardware makers, software developers, and consumers.
+We are not "an AI for everyone." We focus on one thing: **everyday tech pain points for seniors + paying adult children + the APAC aging epicenter**.
 
-### 2. Dual Business Model
-- **B2B Platform Fees** — licensing revenue from hardware adopters
-- **B2B2C Revenue Share** — share of software sales on our platform
-
-### 3. High-Value Niches
-Launching with three high-spend niches (golf, ski, children vision) builds a base user audience that flywheels third-party developers.
-
-### 4. Proven Reference Models
-- **Qualcomm** — bundled patent licensing as industry foundation
-- **Sony PlayStation** — third-party software ecosystem royalties
-- **Android** — open standard + broad hardware adoption
-
-## Request Detailed Materials
-
-For our full pitch deck, financial projections, valuation and term sheet, please request via the mailto button. We share under NDA.
+Request the full Pitch Deck, financial projections, valuation and investment terms via the button below — we share under NDA.
