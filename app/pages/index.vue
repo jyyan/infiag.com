@@ -72,6 +72,12 @@ const revenueStreams = computed(() => [
   { share: t('home.lumi.flywheel.i2.share'), title: t('home.lumi.flywheel.i2.title'), desc: t('home.lumi.flywheel.i2.desc'), detail: t('home.lumi.flywheel.i2.detail'), icon: t('home.lumi.flywheel.i2.icon') },
   { share: t('home.lumi.flywheel.i3.share'), title: t('home.lumi.flywheel.i3.title'), desc: t('home.lumi.flywheel.i3.desc'), detail: t('home.lumi.flywheel.i3.detail'), icon: t('home.lumi.flywheel.i3.icon') },
 ])
+
+const advisorQuotes = computed(() => {
+  const list = tm('home.lumi.advisor.quotes') as unknown[]
+  if (!Array.isArray(list)) return []
+  return list.map((q) => (typeof q === 'string' ? q : rt(q as any))) as string[]
+})
 </script>
 
 <template>
@@ -193,6 +199,20 @@ const revenueStreams = computed(() => [
         </NuxtLink>
       </div>
     </SectionContainer>
+
+    <!-- 7.5. Advisor: 林偉賢 -->
+    <AdvisorCard
+      variant="compact"
+      :eyebrow="t('home.lumi.advisor.eyebrow')"
+      :name="t('home.lumi.advisor.name')"
+      :title="t('home.lumi.advisor.title')"
+      :headline="t('home.lumi.advisor.headline')"
+      :quotes="advisorQuotes"
+      :expand-label="t('home.lumi.advisor.expand_label')"
+      :video-label="t('home.lumi.advisor.video_label')"
+      :full-speech="t('home.lumi.advisor.full_speech')"
+      video-href="https://91bse.org/"
+    />
 
     <!-- 8. For Business entry -->
     <SectionContainer variant="tight">
