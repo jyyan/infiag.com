@@ -1,5 +1,5 @@
 <script setup lang="ts">
-defineProps<{
+const props = defineProps<{
   label: string
   title: string
   quote: string
@@ -7,6 +7,11 @@ defineProps<{
   bodyP2: string
   tagline: string
 }>()
+
+const titleParts = computed(() => {
+  const m = props.title.match(/^(.+?(?:——|—))(.+)$/)
+  return m ? ([m[1], m[2]] as const) : ([props.title, ''] as const)
+})
 </script>
 
 <template>
@@ -29,10 +34,8 @@ defineProps<{
           v-motion
           :initial="{ opacity: 0, y: 24 }"
           :visible-once="{ opacity: 1, y: 0, transition: { duration: 700 } }"
-          class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-center mb-12 text-fg-primary"
-        >
-          {{ title }}
-        </h2>
+          class="text-3xl md:text-5xl lg:text-6xl font-display font-bold text-center mb-12 text-fg-primary text-balance"
+        ><span class="inline-block">{{ titleParts[0] }}</span><span v-if="titleParts[1]" class="inline-block">{{ titleParts[1] }}</span></h2>
 
         <blockquote
           v-motion
