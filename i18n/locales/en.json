@@ -65,21 +65,38 @@
         "body_p2": "AI can give them the answer. It can’t give them the hand that walks them through.",
         "tagline": "LUMI sits on their screen — gently pointing to every next step, until the thing actually gets done."
       },
+      "market": {
+        "eyebrow_macro": "MARKET · OPPORTUNITY",
+        "title": "Aging is the largest irreversible trend of the 21st century",
+        "subtitle": "APAC is the epicenter — your parents are part of it.",
+        "kpi": {
+          "i1": { "stat": "3–5", "label": "Tech problems per day", "desc": "Each senior runs into 3–5 daily tech-operation issues.", "icon": "message-circle-question" },
+          "i2": { "stat": "1.4B", "label": "Global 60+ by 2030", "desc": "Aging is an irreversible long-term trend.", "icon": "globe" },
+          "i3": { "stat": "570M", "label": "APAC 60+ by 2030", "desc": "40% of the world’s 60+ population.", "icon": "compass" },
+          "i4": { "stat": "+250K", "label": "New seniors daily", "desc": "The market grows every single day.", "icon": "trending-up" }
+        },
+        "apac": {
+          "title": "East Asia + Southeast Asia — Inflection-point countries",
+          "header_country": "Country / Region",
+          "header_2020": "60+ in 2020",
+          "header_2030": "60+ in 2030 (est.)",
+          "header_2050_share": "60+ share in 2050",
+          "source_note": "Source: UN World Population Prospects",
+          "countries": [
+            { "name": "China", "c2020": "260M", "c2030": "400M", "c2050": "34%" },
+            { "name": "Japan", "c2020": "42M", "c2030": "45M", "c2050": "42% (world top)" },
+            { "name": "Korea", "c2020": "13M", "c2030": "18M", "c2050": "40%" },
+            { "name": "Taiwan", "c2020": "4.6M", "c2030": "6.5M", "c2050": "40%" },
+            { "name": "Thailand", "c2020": "13M (18%)", "c2030": "17M (24%)", "c2050": "33%" },
+            { "name": "Vietnam", "c2020": "11M", "c2030": "18M", "c2050": "26%" },
+            { "name": "Singapore", "c2020": "0.9M (16%)", "c2030": "1.3M (24%)", "c2050": "33%" },
+            { "name": "SEA total", "c2020": "65M (9.8%)", "c2030": "100M (14%)", "c2050": "160M (22%)" }
+          ]
+        }
+      },
       "pain": {
         "title": "This isn’t isolated — it’s happening every day, all over the world.",
         "subtitle": "Your parents have probably asked you...",
-        "i1_stat": "3-5",
-        "i1_label": "per-day, per-elder",
-        "i1_desc": "tech operation problems they hit.",
-        "i2_stat": "1.4B",
-        "i2_label": "global 60+ population by 2030",
-        "i2_desc": "Aging is the irreversible mega-trend.",
-        "i3_stat": "+250K",
-        "i3_label": "new elders every day",
-        "i3_desc": "The market grows while you sleep.",
-        "i4_stat": "USD $240",
-        "i4_label": "yearly willingness-to-pay",
-        "i4_desc": "Adult children, paying to solve their parents’ tech problems.",
         "scenarios": {
           "s1": { "quote": "“Why is my phone <b>silent</b>?”", "cause": "Do-not-disturb left on" },
           "s2": { "quote": "“I <b>forgot the password</b> again.”", "cause": "3× resets / month avg." },

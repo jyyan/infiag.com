@@ -1,5 +1,5 @@
 <script setup lang="ts">
-const { t, locale } = useI18n()
+const { t, tm, rt, locale } = useI18n()
 const localePath = useLocalePath()
 const { alliance, pitchDeck } = useMailto()
 const { founders } = useFounders()
@@ -22,12 +22,23 @@ useSchemaOrg([
   }),
 ])
 
-const painPoints = computed(() => [
-  { stat: t('home.lumi.pain.i1_stat'), label: t('home.lumi.pain.i1_label'), desc: t('home.lumi.pain.i1_desc'), icon: 'message-circle-question' },
-  { stat: t('home.lumi.pain.i2_stat'), label: t('home.lumi.pain.i2_label'), desc: t('home.lumi.pain.i2_desc'), icon: 'users' },
-  { stat: t('home.lumi.pain.i3_stat'), label: t('home.lumi.pain.i3_label'), desc: t('home.lumi.pain.i3_desc'), icon: 'home' },
-  { stat: t('home.lumi.pain.i4_stat'), label: t('home.lumi.pain.i4_label'), desc: t('home.lumi.pain.i4_desc'), icon: 'headphones' },
+const marketKpis = computed(() => [
+  { stat: t('home.lumi.market.kpi.i1.stat'), label: t('home.lumi.market.kpi.i1.label'), desc: t('home.lumi.market.kpi.i1.desc'), icon: t('home.lumi.market.kpi.i1.icon') },
+  { stat: t('home.lumi.market.kpi.i2.stat'), label: t('home.lumi.market.kpi.i2.label'), desc: t('home.lumi.market.kpi.i2.desc'), icon: t('home.lumi.market.kpi.i2.icon') },
+  { stat: t('home.lumi.market.kpi.i3.stat'), label: t('home.lumi.market.kpi.i3.label'), desc: t('home.lumi.market.kpi.i3.desc'), icon: t('home.lumi.market.kpi.i3.icon') },
+  { stat: t('home.lumi.market.kpi.i4.stat'), label: t('home.lumi.market.kpi.i4.label'), desc: t('home.lumi.market.kpi.i4.desc'), icon: t('home.lumi.market.kpi.i4.icon') },
 ])
+
+const apacCountries = computed(() => {
+  const raw = tm('home.lumi.market.apac.countries')
+  if (!Array.isArray(raw)) return []
+  return raw.map((item: any) => ({
+    name: rt(item.name),
+    c2020: rt(item.c2020),
+    c2030: rt(item.c2030),
+    c2050: rt(item.c2050),
+  }))
+})
 
 const painScenarios = computed(() =>
   (['s1', 's2', 's3', 's4', 's5', 's6', 's7', 's8'] as const).map((k) => ({
@@ -103,11 +114,19 @@ const flywheel = computed(() => [
       :tagline="t('home.lumi.stuck.tagline')"
     />
 
-    <!-- 3. Pain point stats -->
-    <PainPointStats
-      :title="t('home.lumi.pain.title')"
-      :subtitle="t('home.lumi.pain.subtitle')"
-      :items="painPoints"
+    <!-- 3. Market opportunity (replaces PainPointStats) -->
+    <MarketOpportunity
+      :eyebrow-macro="t('home.lumi.market.eyebrow_macro')"
+      :title="t('home.lumi.market.title')"
+      :subtitle="t('home.lumi.market.subtitle')"
+      :kpis="marketKpis"
+      :apac-title="t('home.lumi.market.apac.title')"
+      :apac-source-note="t('home.lumi.market.apac.source_note')"
+      :header-country="t('home.lumi.market.apac.header_country')"
+      :header-2020="t('home.lumi.market.apac.header_2020')"
+      :header-2030="t('home.lumi.market.apac.header_2030')"
+      :header-2050-share="t('home.lumi.market.apac.header_2050_share')"
+      :countries="apacCountries"
     />
 
     <!-- 3.5. Pain scenarios — 8 daily-tech moments parents have asked -->
