@@ -84,6 +84,15 @@ const flywheel = computed(() => [
       :value="t('home.lumi.mission.value')"
     />
 
+    <!-- 1.7. Capital backers trust bar -->
+    <CapitalBackers
+      :eyebrow="t('home.lumi.backers.eyebrow')"
+      :b1-role="t('home.lumi.backers.b1_role')"
+      :b2-role="t('home.lumi.backers.b2_role')"
+      :b3-role="t('home.lumi.backers.b3_role')"
+      :headline="t('home.lumi.backers.headline')"
+    />
+
     <!-- 2. Stuck person opening -->
     <StuckPersonSection
       :label="t('home.lumi.stuck.label')"

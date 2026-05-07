@@ -45,6 +45,13 @@
         "eyebrow_value": "CORE VALUE",
         "value": "Elders First"
       },
+      "backers": {
+        "eyebrow": "STRATEGIC BACKERS",
+        "b1_role": "Capital · Lead Seed Investor",
+        "b2_role": "Capital · Co-investor",
+        "b3_role": "Holdings · Co-investor",
+        "headline": "Three senior financial institutions across APAC have committed to Infinity Agentic's seed round."
+      },
       "hero": {
         "tagline": "Meet LUMI",
         "title": "I built her for my mom.",
