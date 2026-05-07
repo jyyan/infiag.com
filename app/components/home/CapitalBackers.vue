@@ -24,7 +24,7 @@ const backers = [
         <FadeInUp v-for="(b, i) in backers" :key="b.name" :delay="i * 100">
           <div
             class="rounded-2xl p-6 lg:p-7 min-h-[220px] flex flex-col items-center justify-center gap-4 shadow-lg"
-            :class="b.dark ? 'bg-[#0A1428]' : 'bg-white'"
+            :class="b.dark ? 'bg-[#000718]' : 'bg-white'"
           >
             <div class="flex-1 flex items-center justify-center w-full">
               <img
