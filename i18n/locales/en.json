@@ -39,6 +39,12 @@
         "title": "LUMI · The AI companion built for parents",
         "description": "LUMI walks parents through every screen step — so adult children don’t have to take that call. Lumi (Latin: lux, light), by Infinity Agentic."
       },
+      "mission": {
+        "eyebrow_mission": "MISSION",
+        "mission": "No senior left behind in the AI era",
+        "eyebrow_value": "CORE VALUE",
+        "value": "Elders First"
+      },
       "hero": {
         "tagline": "Meet LUMI",
         "title": "I built her for my mom.",

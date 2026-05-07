@@ -39,6 +39,12 @@
         "title": "LUMI · 为了爸妈而生的 AI 同伴",
         "description": "LUMI 陪父母完成每一个屏幕操作，子女不必再接那通电话。Lumi 来自拉丁文 lux，意为光。"
       },
+      "mission": {
+        "eyebrow_mission": "使命 · MISSION",
+        "mission": "让全天下没有学不会 AI 的银发族",
+        "eyebrow_value": "核心价值 · CORE VALUE",
+        "value": "长者为重"
+      },
       "hero": {
         "tagline": "Meet LUMI",
         "title": "为了我妈，我们造了她。",

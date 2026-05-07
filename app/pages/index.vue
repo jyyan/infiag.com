@@ -76,6 +76,14 @@ const flywheel = computed(() => [
       :secondary-cta-to="localePath('/') + '#roadmap'"
     />
 
+    <!-- 1.5. Mission bar -->
+    <MissionBar
+      :eyebrow-mission="t('home.lumi.mission.eyebrow_mission')"
+      :mission="t('home.lumi.mission.mission')"
+      :eyebrow-value="t('home.lumi.mission.eyebrow_value')"
+      :value="t('home.lumi.mission.value')"
+    />
+
     <!-- 2. Stuck person opening -->
     <StuckPersonSection
       :label="t('home.lumi.stuck.label')"
